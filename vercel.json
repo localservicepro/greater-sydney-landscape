@@ -1,0 +1,151 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "node build.mjs",
+  "outputDirectory": "dist",
+  "cleanUrls": true,
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.greatersydneylandscapes.com.au"
+        }
+      ],
+      "destination": "https://greatersydneylandscapes.com.au/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/home",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/home/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/about-us",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/about-us/",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us/",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/services.html",
+      "destination": "/services/",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas",
+      "destination": "/areas/",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/",
+      "destination": "/areas/",
+      "permanent": true
+    },
+    {
+      "source": "/lawn-mowing",
+      "destination": "/services/lawn-mowing/",
+      "permanent": true
+    },
+    {
+      "source": "/garden-maintenance",
+      "destination": "/services/garden-maintenance/",
+      "permanent": true
+    },
+    {
+      "source": "/hedge-trimming",
+      "destination": "/services/hedge-trimming/",
+      "permanent": true
+    },
+    {
+      "source": "/lawn-care",
+      "destination": "/services/lawn-care/",
+      "permanent": true
+    },
+    {
+      "source": "/pressure-washing",
+      "destination": "/services/pressure-washing/",
+      "permanent": true
+    },
+    {
+      "source": "/landscaping",
+      "destination": "/services/landscaping/",
+      "permanent": true
+    },
+    {
+      "source": "/weed-spraying",
+      "destination": "/services/lawn-care/",
+      "permanent": true
+    },
+    {
+      "source": "/fertilising",
+      "destination": "/services/lawn-care/",
+      "permanent": true
+    },
+    {
+      "source": "/ride-on-mowing",
+      "destination": "/services/lawn-mowing/",
+      "permanent": true
+    },
+    {
+      "source": "/services",
+      "destination": "/services/",
+      "permanent": true
+    },
+    {
+      "source": "/about",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/areas",
+      "destination": "/areas/",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/thank-you",
+      "destination": "/thank-you/",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ]
+}

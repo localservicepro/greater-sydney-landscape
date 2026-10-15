@@ -1,0 +1,162 @@
+{
+ "hero-lawn-hedge": {
+  "w": 4032,
+  "h": 3024,
+  "widths": [
+   768,
+   1280,
+   1920
+  ],
+  "source": "IMG_3978.webp"
+ },
+ "lawn-mowing": {
+  "w": 4032,
+  "h": 3024,
+  "widths": [
+   768,
+   1280,
+   1920
+  ],
+  "source": "IMG_0358.webp"
+ },
+ "lawn-stripes": {
+  "w": 3024,
+  "h": 4032,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "source": "IMG_7591.webp"
+ },
+ "ride-on-driveway": {
+  "w": 4284,
+  "h": 5712,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "source": "IMG_9979.webp"
+ },
+ "ride-on-lawn": {
+  "w": 4284,
+  "h": 5712,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "source": "IMG_0385.webp"
+ },
+ "ride-on-leaves": {
+  "w": 4284,
+  "h": 5712,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "source": "IMG_0171.webp"
+ },
+ "ute-and-mower": {
+  "w": 4284,
+  "h": 5712,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "source": "IMG_9957.webp"
+ },
+ "hedge-trimming": {
+  "w": 4284,
+  "h": 5712,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "source": "IMG_7788.webp"
+ },
+ "hedge-house": {
+  "w": 3024,
+  "h": 4032,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "source": "IMG_6688.webp"
+ },
+ "topiary": {
+  "w": 4284,
+  "h": 5712,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "source": "IMG_7271.webp"
+ },
+ "strata-grounds": {
+  "w": 1920,
+  "h": 1080,
+  "widths": [
+   768,
+   1280,
+   1920
+  ],
+  "source": "65f2c6a76b984fbc30bed2138619ef6a.jpeg"
+ },
+ "garden-lawn-dog": {
+  "w": 3024,
+  "h": 4032,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "source": "IMG_3975.webp"
+ },
+ "commercial-entry": {
+  "w": 4284,
+  "h": 5712,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "source": "IMG_7088.webp"
+ },
+ "cala-sign-garden": {
+  "w": 3024,
+  "h": 4032,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "source": "IMG_4772.webp"
+ },
+ "lawn-care-watering": {
+  "w": 4284,
+  "h": 5712,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "source": "IMG_8163.webp"
+ },
+ "pressure-washing": {
+  "w": 1280,
+  "h": 714,
+  "widths": [
+   480,
+   800,
+   1280
+  ],
+  "source": "generated (Higgsfield)"
+ }
+}
