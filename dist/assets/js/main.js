@@ -162,6 +162,9 @@
     } catch (err) { /* ignore */ }
   }
 
+  /* ---------- Route map: stop the mower for reduced-motion users ---------- */
+  if (reduceMotion) d.querySelectorAll('.route-map animateMotion').forEach(function (el) { el.remove(); });
+
   /* ---------- Current-year ---------- */
   d.querySelectorAll('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
 })();

@@ -1,5 +1,5 @@
 import { business, address, areas, services, home } from '../data/site.js';
-import { page, img, esc, quoteForm, ctaBand, breadcrumbSchema } from '../lib/layout.js';
+import { page, img, esc, quoteForm, ctaBand, breadcrumbSchema, gmbMap } from '../lib/layout.js';
 import { icon } from '../lib/icons.js';
 
 const strokeIcon = (name) => icon(name).replace('<svg', '<svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"');
@@ -118,7 +118,7 @@ ${subHero({ imgKey: 'ride-on-driveway', alt: 'Ride-on mowing across Greater Sydn
         <div class="footer-links" style="columns:2;margin-top:16px">${services.map((s) => `<a href="/services/${s.slug}/" style="color:#fff">${esc(s.name)}</a>`).join('')}</div>
       </div>
       <div class="reveal" data-d="2">
-        <div class="map-embed"><iframe title="Map of Greater Sydney Landscapes, 56 Ballandella Rd Toongabbie" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen src="https://www.google.com/maps?q=${encodeURIComponent(address + ', Australia')}&output=embed"></iframe></div>
+        <div class="map-embed">${gmbMap()}</div>
       </div>
     </div>
   </div>
@@ -153,7 +153,7 @@ ${subHero({ imgKey: 'hero-lawn-hedge', alt: 'Contact Greater Sydney Landscapes f
         <div class="info-row"><div class="ico">${strokeIcon('pin')}</div><div><strong>Address</strong><a href="${business.gmb}" target="_blank" rel="noopener">${esc(address)}</a></div></div>
         <div class="info-row"><div class="ico">${strokeIcon('clock')}</div><div><strong>Hours</strong><table class="hours-table">${business.hoursDisplay.map(([d, h]) => `<tr><td>${d}</td><td>${h}</td></tr>`).join('')}</table></div></div>
       </div>
-      <div class="map-embed" style="margin-top:32px"><iframe title="Map of Greater Sydney Landscapes, 56 Ballandella Rd Toongabbie" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen src="https://www.google.com/maps?q=${encodeURIComponent(address + ', Australia')}&output=embed"></iframe></div>
+      <div class="map-embed" style="margin-top:32px">${gmbMap()}</div>
     </div>
     <div class="reveal" data-d="2">${quoteForm()}</div>
   </div>

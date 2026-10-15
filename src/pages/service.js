@@ -1,5 +1,5 @@
 import { business, address, areas, services, foldedServices } from '../data/site.js';
-import { page, img, esc, faqBlock, faqSchema, serviceSchema, breadcrumbSchema, ctaBand } from '../lib/layout.js';
+import { page, img, esc, faqBlock, faqSchema, serviceSchema, breadcrumbSchema, ctaBand, routeMap } from '../lib/layout.js';
 import { icon } from '../lib/icons.js';
 
 const strokeIcon = (name) => icon(name).replace('<svg', '<svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"');
@@ -21,16 +21,16 @@ const media = {
     ],
   },
   'hedge-trimming': {
-    hero: { key: 'hedge-trimming', alt: 'Hedge trimming Sydney — crew member trimming a front boundary hedge in The Hills' },
+    hero: { key: 'hero-lawn-hedge', alt: 'Hedge trimming Sydney — formal hedge clipped straight and level beside a manicured lawn in The Hills', position: 'center 55%' },
     pair: [
-      { key: 'topiary', alt: 'Formal hedge shaping in Hornsby — clipped topiary ball' },
+      { key: 'hedge-trimming', alt: 'Greater Sydney Landscapes crew member trimming a front boundary hedge in The Hills' },
       { key: 'hedge-house', alt: 'Hedge trimming beside a heritage fence in Parramatta' },
     ],
   },
   'lawn-care': {
-    hero: { key: 'lawn-care-watering', alt: 'Lawn care Sydney — watering in a freshly fertilised lawn in Western Sydney' },
+    hero: { key: 'lawn-stripes', alt: 'Lawn care Sydney — thick, weed-free striped lawn in Toongabbie after fertilising and weed spraying', position: 'center 58%' },
     pair: [
-      { key: 'lawn-stripes', alt: 'Healthy, weed-free lawn in Toongabbie after fertilising and weed spraying' },
+      { key: 'lawn-care-watering', alt: 'Watering in a freshly fertilised lawn in Western Sydney' },
       { key: 'garden-lawn-dog', alt: 'Thick green lawn and garden bed after a lawn care program' },
     ],
   },
@@ -52,7 +52,7 @@ const media = {
 
 export function renderService(s, { generated }) {
   const m = media[s.slug];
-  const heroImg = img(m.hero.key, { alt: m.hero.alt, sizes: '100vw', loading: 'eager', fetchpriority: 'high' });
+  const heroImg = img(m.hero.key, { alt: m.hero.alt, sizes: '100vw', loading: 'eager', fetchpriority: 'high', style: m.hero.position ? `object-position:${m.hero.position}` : '' });
   const related = s.related.map((slug) => services.find((x) => x.slug === slug));
   const folded = foldedServices.filter((f) => f.parent === s.slug);
 
@@ -91,11 +91,6 @@ export function renderService(s, { generated }) {
         <span class="stripe"></span>
         <ul class="checks">${s.includes.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>
       </div>
-      <div class="reveal">
-        <h2>Where we offer ${esc(s.name.toLowerCase())}</h2>
-        <span class="stripe"></span>
-        <p>${esc(s.name)} is available across ${areas.map((a) => a.name).slice(0, -1).join(', ')} and ${areas.slice(-1)[0].name}. We are based at ${esc(address)}, so most of Western Sydney is within a short drive. <a href="/areas/">See all service areas</a>.</p>
-      </div>
       <div class="reveal" style="margin-top:40px">
         <h2>${esc(s.name)} FAQs</h2>
         <span class="stripe"></span>
@@ -126,6 +121,8 @@ export function renderService(s, { generated }) {
     </aside>
   </div>
 </section>
+
+${routeMap(s)}
 
 <section class="section section--off angle-top" aria-labelledby="related-heading">
   <div class="container">

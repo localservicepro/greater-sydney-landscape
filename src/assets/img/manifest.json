@@ -158,5 +158,15 @@
    1280
   ],
   "source": "generated (Higgsfield)"
+ },
+ "service-map": {
+  "w": 1280,
+  "h": 859,
+  "widths": [
+   480,
+   800,
+   1280
+  ],
+  "source": "generated (Higgsfield)"
  }
 }

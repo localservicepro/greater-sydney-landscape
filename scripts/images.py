@@ -95,7 +95,7 @@ if __name__ == '__main__':
         manifest[key] = {'w': size[0], 'h': size[1], 'widths': [w for w in widths if w <= size[0]], 'source': src}
         print(f'{key:22s} {src:40s} {size[0]}x{size[1]}')
     # AI-generated fill-ins (no raw original): register whatever variants exist on disk.
-    for key in ('pressure-washing',):
+    for key in ('pressure-washing', 'service-map'):
         widths = sorted(int(f[len(key) + 1:-5]) for f in os.listdir(OUT) if f.startswith(key + '-') and f.endswith('.webp') and f[len(key) + 1:-5].isdigit())
         if widths:
             largest = Image.open(os.path.join(OUT, f'{key}-{widths[-1]}.webp'))
