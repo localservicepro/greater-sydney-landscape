@@ -273,17 +273,15 @@ p { margin: 0 0 1.1em; }
 .mobile-menu .mm-cta a { border: 0; text-align: center; }
 .mobile-menu .mm-cta .btn { display: inline-flex; }
 
-.call-bar {
-  display: none; position: fixed; left: 0; right: 0; bottom: 0; z-index: 950; padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
-  background: rgba(18,27,31,.96); backdrop-filter: blur(10px); gap: 10px;
-}
-.call-bar a { flex: 1; min-height: 50px; padding: 12px; font-size: .85rem; }
-body.has-call-bar { padding-bottom: 72px; }
-
 @media (max-width: 1080px) {
   .nav-main, .nav-phone { display: none; }
   .nav-burger { display: flex; }
-  .call-bar { display: flex; }
+}
+@media (max-width: 640px) {
+  /* Hero CTAs side by side on phones */
+  .hero .btn-group { flex-wrap: nowrap; gap: 10px; }
+  .hero .btn-group .btn { flex: 1 1 0; min-width: 0; padding: 15px 6px; min-height: 52px; font-size: .78rem; letter-spacing: 0; gap: 6px; }
+  .hero .btn-group .btn svg { width: 16px; height: 16px; }
 }
 @media (max-width: 480px) {
   .brand__name { display: none; }

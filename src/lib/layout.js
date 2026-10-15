@@ -262,10 +262,7 @@ export function header({ light = false, current = '' } = {}) {
     <a class="btn btn--dark btn--lg" href="tel:${business.phoneRaw}">Call ${business.phone}</a>
   </div>
 </div>
-<div class="call-bar" aria-label="Quick contact">
-  <a class="btn btn--dark" href="tel:${business.phoneRaw}">${icon('phone').replace('<svg', '<svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"')} Call now</a>
-  <a class="btn" href="/contact/#quote">Free quote</a>
-</div>`;
+`;
 }
 
 export function footer() {
@@ -363,7 +360,7 @@ ${preloadImage ? imgPreload(preloadImage) : ''}
 ${ld.map((s) => `<script type="application/ld+json">${JSON.stringify(s)}</script>`).join('\n')}
 <script src="https://link.msgsndr.com/js/external-tracking.js" data-tracking-id="${business.ghlTrackingId}"> </script>
 </head>
-<body class="has-call-bar">
+<body>
 ${header({ light, current })}
 <main id="main">
 ${body}
