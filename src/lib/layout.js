@@ -199,7 +199,6 @@ export const quoteForm = ({ heading = 'Get a free quote', note = 'Tell us about 
           <option>Other</option>
         </select><div class="form-error">Please choose a service.</div></div>
       <div class="field full"><label for="job_notes">Job notes</label><textarea id="job_notes" name="job_notes" placeholder="How often, access details, anything we should know"></textarea></div>
-      <div class="hp" aria-hidden="true"><label>Company website<input name="company_website" type="text" tabindex="-1" autocomplete="off"></label></div>
     </div>
     <div class="form-footer">
       <button class="btn btn--lg" type="submit">Send my quote request</button>

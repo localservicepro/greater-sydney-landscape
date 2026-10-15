@@ -505,7 +505,6 @@ body.has-call-bar { padding-bottom: 72px; }
 .form-error { color: #b42318; font-size: .85rem; margin-top: 6px; display: none; }
 .field.is-invalid .form-error { display: block; }
 .field.is-invalid input, .field.is-invalid select { border-color: #d92d20; }
-.hp { position: absolute; left: -9999px; opacity: 0; height: 0; width: 0; }
 @media (max-width: 900px) { .contact { grid-template-columns: 1fr; } }
 @media (max-width: 560px) { .form-grid { grid-template-columns: 1fr; } }
 

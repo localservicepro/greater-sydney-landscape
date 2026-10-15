@@ -132,7 +132,6 @@
       return ok;
     };
     form.addEventListener('submit', function (e) {
-      if (form.elements['company_website'] && form.elements['company_website'].value) { e.preventDefault(); return; } // honeypot
       if (!validate()) { e.preventDefault(); form.querySelector('.is-invalid input, .is-invalid select').focus(); return; }
       e.preventDefault();
       var btn = form.querySelector('[type="submit"]');
