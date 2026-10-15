@@ -133,7 +133,7 @@ export function render({ generated }) {
       <span class="stripe reveal" data-d="1"></span>
       <div class="grid grid--2 reveal" data-d="2" style="margin-top:28px">
         <div class="feature"><div class="feature__icon">${strokeIcon('calendar')}</div><div><h3>A schedule, not a maybe</h3><p>Fortnightly, three-weekly or monthly. We lock in your round and text before every visit.</p></div></div>
-        <div class="feature"><div class="feature__icon">${strokeIcon('user')}</div><div><h3>Same crew, every time</h3><p>The people who quote your property are the people who turn up. No subcontractors, no strangers.</p></div></div>
+        <div class="feature"><div class="feature__icon">${strokeIcon('user')}</div><div><h3>Same crew, every time</h3><p>The people who quote your property are the people who turn up. No strangers, no guesswork.</p></div></div>
         <div class="feature"><div class="feature__icon">${strokeIcon('shield')}</div><div><h3>Fully insured</h3><p>Public liability cover for residential, strata and commercial sites, with paperwork on request.</p></div></div>
         <div class="feature"><div class="feature__icon">${strokeIcon('truck')}</div><div><h3>Equipped for any block</h3><p>Push and ride-on mowers, pole hedgers and pressure washers, so one visit covers the whole property.</p></div></div>
         <div class="feature"><div class="feature__icon">${strokeIcon('leaf')}</div><div><h3>Sustainable where it counts</h3><p>Green waste mulched or composted, water-wise planting and no more product on your lawn than it needs.</p></div></div>
