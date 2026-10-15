@@ -1,5 +1,5 @@
 import { business, address, areas, services, foldedServices } from '../data/site.js';
-import { page, img, esc, faqBlock, faqSchema, serviceSchema, breadcrumbSchema, ctaBand, routeMap } from '../lib/layout.js';
+import { page, img, esc, faqBlock, faqSchema, serviceSchema, breadcrumbSchema, ctaBand } from '../lib/layout.js';
 import { icon } from '../lib/icons.js';
 
 const strokeIcon = (name) => icon(name).replace('<svg', '<svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"');
@@ -92,6 +92,11 @@ export function renderService(s, { generated }) {
         <ul class="checks">${s.includes.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>
       </div>
       <div class="reveal" style="margin-top:40px">
+        <h2>Where we offer ${esc(s.name.toLowerCase())}</h2>
+        <span class="stripe"></span>
+        <p>${esc(s.name)} is available across ${areas.map((a) => a.name).slice(0, -1).join(', ')} and ${areas.slice(-1)[0].name}. We are based at ${esc(address)}, so most of Western Sydney is within a short drive. <a href="/areas/">See all service areas</a>.</p>
+      </div>
+      <div class="reveal" style="margin-top:40px">
         <h2>${esc(s.name)} FAQs</h2>
         <span class="stripe"></span>
         ${faqBlock(s.faqs)}
@@ -121,8 +126,6 @@ export function renderService(s, { generated }) {
     </aside>
   </div>
 </section>
-
-${routeMap(s)}
 
 <section class="section section--off angle-top" aria-labelledby="related-heading">
   <div class="container">

@@ -1,5 +1,5 @@
 import { business, address, areas, services, foldedServices, home } from '../data/site.js';
-import { page, img, esc, faqBlock, faqSchema, quoteForm, ctaBand, abs } from '../lib/layout.js';
+import { page, img, esc, faqBlock, faqSchema, quoteForm, ctaBand, abs, routeMapFigure } from '../lib/layout.js';
 import { icon } from '../lib/icons.js';
 
 const strokeIcon = (name) => icon(name).replace('<svg', '<svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"');
@@ -187,8 +187,11 @@ export function render({ generated }) {
       <span class="stripe"></span>
       <p class="lede">We are based at ${esc(address)} and run regular rounds through Toongabbie, Parramatta, Blacktown, The Hills, Hornsby, Dural and the Inner West. Not sure if we cover your street? Ask, we probably do.</p>
     </div>
-    <div class="area-grid reveal" data-d="1" style="margin-top:36px">
-      ${areas.map((a) => `<a class="area-chip${a.home ? ' is-home' : ''}" href="/areas/#${a.slug}"><strong>${esc(a.name)}</strong><span>${esc(a.blurb.split('.')[0])}.</span></a>`).join('')}
+    <div class="areas__layout">
+      <div class="reveal" data-d="1">${routeMapFigure()}</div>
+      <div class="area-grid reveal" data-d="2">
+        ${areas.map((a) => `<a class="area-chip${a.home ? ' is-home' : ''}" href="/areas/#${a.slug}"><strong>${esc(a.name)}</strong><span>${esc(a.blurb.split('.')[0])}.</span></a>`).join('')}
+      </div>
     </div>
   </div>
 </section>

@@ -92,68 +92,56 @@ export const serviceSchema = (s) => ({
    draws at the same rate via stroke-dashoffset, so they stay in sync. */
 export const routeStops = [
   { name: 'Toongabbie', x: 470, y: 430, home: true },
-  { name: 'Blacktown', x: 300, y: 390 },
+  { name: 'Blacktown', x: 300, y: 390, label: 'left' },
   { name: 'The Hills', x: 520, y: 260 },
   { name: 'Dural', x: 610, y: 130 },
   { name: 'Hornsby', x: 800, y: 170 },
   { name: 'Inner West', x: 850, y: 530 },
   { name: 'Sydney', x: 1010, y: 470 },
-  { name: 'Parramatta', x: 560, y: 470 },
+  { name: 'Parramatta', x: 560, y: 470, label: 'below' },
 ];
 const routePath = 'M470,430 C400,420 340,410 300,390 C330,320 440,300 520,260 C560,210 580,170 610,130 C680,120 740,150 800,170 C840,280 860,400 850,530 C900,520 960,500 1010,470 C900,520 700,500 560,470 C530,470 500,450 470,430 Z';
 const ROUTE_SECONDS = 20;
 
-export function routeMap(service) {
-  const focus = routeStops.filter((st) => service.navDescriptor.includes(st.name)).map((st) => st.name);
-  const title = `Where we offer ${service.name.toLowerCase()}`;
+export function routeMapFigure({ focus = [], alt = '', light = false } = {}) {
   const stopsText = `${areas.map((a) => a.name).slice(0, -1).join(', ')} and ${areas.slice(-1)[0].name}`;
   const pins = routeStops.map((st, i) => `
-        <g class="pin${st.home ? ' is-home' : ''}${focus.includes(st.name) ? ' is-focus' : ''}" transform="translate(${st.x} ${st.y})">
-          <circle class="pulse" r="9" style="animation-delay:${(i * ROUTE_SECONDS / routeStops.length).toFixed(1)}s"></circle>
-          <circle class="dot" r="${st.home ? 10 : 8}"></circle>
-          <text x="0" y="${st.y < 200 ? 40 : -22}" text-anchor="middle">${esc(st.name)}${st.home ? ' · HQ' : ''}</text>
-        </g>`).join('');
+      <g class="pin${st.home ? ' is-home' : ''}${focus.includes(st.name) ? ' is-focus' : ''}" transform="translate(${st.x} ${st.y})">
+        <circle class="pulse" r="9" style="animation-delay:${(i * ROUTE_SECONDS / routeStops.length).toFixed(1)}s"></circle>
+        <circle class="dot" r="${st.home ? 10 : 8}"></circle>
+        <text x="${st.label === 'left' ? -18 : 0}" y="${st.label === 'left' ? 11 : (st.label === 'below' || st.y < 200) ? 44 : -24}" text-anchor="${st.label === 'left' ? 'end' : 'middle'}">${esc(st.name)}${st.home ? ' · HQ' : ''}</text>
+      </g>`).join('');
   return `
-<section class="section section--dark service-map angle-top angle-bottom" aria-labelledby="map-heading">
-  <div class="container">
-    <div class="service-map__head reveal">
-      <div>
-        <div class="eyebrow">Where we work</div>
-        <h2 id="map-heading">${esc(title)}</h2>
-        <span class="stripe"></span>
-      </div>
-      <p class="lede">${esc(service.name)} is available across ${esc(stopsText)}. We are based at ${esc(address)}, so most of Western Sydney is within a short drive of our yard. <a href="/areas/" style="color:var(--lime)">See all service areas</a>.</p>
-    </div>
-    <div class="route-map reveal" data-d="1" role="img" aria-label="Map of Greater Sydney showing the Greater Sydney Landscapes service route from Toongabbie through ${esc(stopsText)}">
-      ${img('service-map', { alt: `Stylised map of Greater Sydney showing where Greater Sydney Landscapes offers ${esc(service.name)} — ${esc(stopsText)}`, sizes: '(max-width: 1200px) 100vw, 1200px' })}
-      <svg viewBox="0 0 1200 800" aria-hidden="true" focusable="false">
-        <defs>
-          <filter id="mower-shadow" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="#000" flood-opacity=".45"/></filter>
-        </defs>
-        <path id="route" class="route-guide" d="${routePath}" pathLength="1"></path>
-        <path class="route-draw" d="${routePath}" pathLength="1" style="animation-duration:${ROUTE_SECONDS}s"></path>
-        ${pins}
-        <g class="mower" filter="url(#mower-shadow)">
-          <g class="mower__body">
-            <rect x="-26" y="-18" width="52" height="36" rx="9" fill="#a3ca22"></rect>
-            <rect x="-26" y="-18" width="52" height="36" rx="9" fill="none" stroke="#121b1f" stroke-width="3"></rect>
-            <rect x="-12" y="-11" width="30" height="22" rx="5" fill="#121b1f"></rect>
-            <rect x="-6" y="-6" width="14" height="12" rx="3" fill="#6ebb26"></rect>
-            <rect x="18" y="-8" width="12" height="16" rx="3" fill="#1fa334"></rect>
-            <rect x="-30" y="-24" width="12" height="8" rx="3" fill="#121b1f"></rect>
-            <rect x="-30" y="16" width="12" height="8" rx="3" fill="#121b1f"></rect>
-            <rect x="12" y="-26" width="14" height="9" rx="3" fill="#121b1f"></rect>
-            <rect x="12" y="17" width="14" height="9" rx="3" fill="#121b1f"></rect>
-          </g>
-          <animateMotion dur="${ROUTE_SECONDS}s" repeatCount="indefinite" rotate="auto" calcMode="paced"><mpath href="#route"></mpath></animateMotion>
+<div class="route-figure${light ? ' route-figure--light' : ''}">
+  <div class="route-map" role="img" aria-label="Map of Greater Sydney showing the Greater Sydney Landscapes service route from Toongabbie through ${esc(stopsText)}">
+    ${img('service-map', { alt: alt || `Stylised map of Greater Sydney showing the Greater Sydney Landscapes service area — ${stopsText}`, sizes: '(max-width: 900px) 100vw, 600px' })}
+    <svg viewBox="0 0 1200 800" aria-hidden="true" focusable="false">
+      <defs>
+        <filter id="mower-shadow" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="#000" flood-opacity=".45"/></filter>
+      </defs>
+      <path id="route" class="route-guide" d="${routePath}" pathLength="1"></path>
+      <path class="route-draw" d="${routePath}" pathLength="1" style="animation-duration:${ROUTE_SECONDS}s"></path>
+      ${pins}
+      <g class="mower" filter="url(#mower-shadow)">
+        <g class="mower__body">
+          <rect x="-26" y="-18" width="52" height="36" rx="9" fill="#a3ca22"></rect>
+          <rect x="-26" y="-18" width="52" height="36" rx="9" fill="none" stroke="#121b1f" stroke-width="3"></rect>
+          <rect x="-12" y="-11" width="30" height="22" rx="5" fill="#121b1f"></rect>
+          <rect x="-6" y="-6" width="14" height="12" rx="3" fill="#6ebb26"></rect>
+          <rect x="18" y="-8" width="12" height="16" rx="3" fill="#1fa334"></rect>
+          <rect x="-30" y="-24" width="12" height="8" rx="3" fill="#121b1f"></rect>
+          <rect x="-30" y="16" width="12" height="8" rx="3" fill="#121b1f"></rect>
+          <rect x="12" y="-26" width="14" height="9" rx="3" fill="#121b1f"></rect>
+          <rect x="12" y="17" width="14" height="9" rx="3" fill="#121b1f"></rect>
         </g>
-      </svg>
-    </div>
-    <ul class="route-stops reveal" data-d="2" aria-label="Suburbs and regions we service">
-      ${routeStops.map((st) => `<li class="${st.home ? 'is-home' : ''}${focus.includes(st.name) ? ' is-focus' : ''}"><a href="/areas/#${areas.find((a) => a.name === st.name).slug}">${esc(st.name)}</a></li>`).join('')}
-    </ul>
+        <animateMotion dur="${ROUTE_SECONDS}s" repeatCount="indefinite" rotate="auto" calcMode="paced"><mpath href="#route"></mpath></animateMotion>
+      </g>
+    </svg>
   </div>
-</section>`;
+  <ul class="route-stops" aria-label="Suburbs and regions we service">
+    ${routeStops.map((st) => `<li class="${st.home ? 'is-home' : ''}${focus.includes(st.name) ? ' is-focus' : ''}"><a href="/areas/#${areas.find((a) => a.name === st.name).slug}">${esc(st.name)}</a></li>`).join('')}
+  </ul>
+</div>`;
 }
 
 /* ---------- Shared markup ---------- */

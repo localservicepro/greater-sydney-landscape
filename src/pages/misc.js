@@ -1,5 +1,5 @@
 import { business, address, areas, services, home } from '../data/site.js';
-import { page, img, esc, quoteForm, ctaBand, breadcrumbSchema, gmbMap } from '../lib/layout.js';
+import { page, img, esc, quoteForm, ctaBand, breadcrumbSchema, gmbMap, routeMapFigure } from '../lib/layout.js';
 import { icon } from '../lib/icons.js';
 
 const strokeIcon = (name) => icon(name).replace('<svg', '<svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"');
@@ -88,11 +88,14 @@ export function renderAreas() {
 ${subHero({ imgKey: 'ride-on-driveway', alt: 'Ride-on mowing across Greater Sydney — mower on a driveway in The Hills', crumb: 'Service Areas', h1: 'Lawn Mowing &amp; Garden Services Across Greater Sydney', lede: 'From our base in Toongabbie we run regular rounds through Parramatta, Blacktown, The Hills, Hornsby, Dural and the Inner West, with larger projects across the wider Sydney metro.' })}
 <section class="section">
   <div class="container">
-    <div style="max-width:760px" class="reveal">
-      <div class="eyebrow">Where we work</div>
-      <h2>Based in Toongabbie, servicing seven regions of Greater Sydney</h2>
-      <span class="stripe"></span>
-      <p class="lede">We keep our rounds tight so we can be reliable. Most of our lawn mowing, hedge trimming and garden maintenance customers are within 30 minutes of ${esc(address)}. If your suburb is not listed, ask: if it is on the way to one of our rounds, we can usually fit you in.</p>
+    <div class="grid grid--2" style="align-items:center">
+      <div class="reveal">
+        <div class="eyebrow">Where we work</div>
+        <h2>Based in Toongabbie, servicing seven regions of Greater Sydney</h2>
+        <span class="stripe"></span>
+        <p class="lede">We keep our rounds tight so we can be reliable. Most of our lawn mowing, hedge trimming and garden maintenance customers are within 30 minutes of ${esc(address)}. If your suburb is not listed, ask: if it is on the way to one of our rounds, we can usually fit you in.</p>
+      </div>
+      <div class="reveal" data-d="1">${routeMapFigure({ light: true })}</div>
     </div>
     <div class="grid grid--2" style="margin-top:40px">
       ${areas.map((a, i) => `
