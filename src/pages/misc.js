@@ -28,8 +28,8 @@ ${subHero({ imgKey: 'ute-and-mower', alt: 'Greater Sydney Landscapes ute and rid
       <div class="eyebrow">Who we are</div>
       <h2>Local, insured and easy to deal with</h2>
       <span class="stripe"></span>
-      <p class="lede">Greater Sydney Landscapes is run by ${esc(business.owner)} from ${esc(address)}. We started with lawn mowing rounds around Toongabbie, Pendle Hill and Wentworthville and grew, mostly by word of mouth, into hedge trimming, garden maintenance, lawn care, pressure washing and landscaping across Parramatta, Blacktown, The Hills, Hornsby, Dural and the Inner West.</p>
-      <p>We are not a franchise and we do not subcontract. The people who quote your property are the people who turn up to do the work, with the right gear for the job, from push mowers for tight townhouse lawns to ride-on mowers for acreage out towards Dural.</p>
+      <p class="lede">Greater Sydney Landscapes works out of ${esc(address)}, with ${esc(business.owner)} as your point of contact from the first quote to the final invoice. We started with lawn mowing rounds around Toongabbie, Pendle Hill and Wentworthville and grew, mostly by word of mouth, into hedge trimming, garden maintenance, lawn care, pressure washing and landscaping across Parramatta, Blacktown, The Hills, Hornsby, Dural and the Inner West.</p>
+      <p>We are not a franchise. The people who quote your property are the people who turn up to do the work, with the right gear for the job, from push mowers for tight townhouse lawns to ride-on mowers for acreage out towards Dural.</p>
       <p>We hold the qualifications and insurances you would expect for residential, strata and commercial work, and we are happy to send certificates of currency to strata managers and property managers before we start.</p>
     </div>
     <div class="statement__aside reveal" data-d="2">

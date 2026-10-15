@@ -88,7 +88,7 @@ export const services = [
       },
       {
         heading: 'Why Blacktown and Western Sydney homeowners choose us',
-        body: `We are a small, owner-operated crew, so the people who quote your lawn are the people who mow it. We are fully insured, we text before we arrive, and we send one simple invoice at the end of each visit or each month, whichever you prefer. If the lawn is looking tired, we can add fertilising and weed spraying from our lawn care service so it is green again, not just short.`,
+        body: `We are a small local crew, so the people who quote your lawn are the people who mow it. We are fully insured, we text before we arrive, and we send one simple invoice at the end of each visit or each month, whichever you prefer. If the lawn is looking tired, we can add fertilising and weed spraying from our lawn care service so it is green again, not just short.`,
       },
     ],
     faqs: [

@@ -84,7 +84,7 @@ export function render({ generated }) {
       <p class="lede">Greater Sydney Landscapes provides fortnightly and monthly lawn mowing across Toongabbie, Parramatta, Blacktown and The Hills from our base at ${esc(address)}. We also trim hedges, maintain gardens for homes and strata blocks, fertilise and weed-spray lawns, pressure wash driveways and take on landscaping projects.</p>
       <p>If you have ever waited around for a lawn mowing service in Sydney that never showed, you know why we built the business the way we did. You get a set schedule, a text before we arrive, a crew that does the edges and blows the paths every visit, and one invoice. No chasing, no surprises, no mess left behind.</p>
       <ul class="checks" style="margin-top:18px">
-        <li>Owner-led crew based in Toongabbie, not a call centre</li>
+        <li>Local crew based in Toongabbie, not a call centre</li>
         <li>Fully insured for residential, strata and commercial work</li>
         <li>Ride-on mowing for acreage in Dural, Kenthurst and The Hills</li>
         <li>Green waste removed on every visit</li>
