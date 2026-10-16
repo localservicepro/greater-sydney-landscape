@@ -56,7 +56,7 @@ export function render({ generated }) {
       <p class="hero__lede fadeup" data-d="2">Regular lawn mowing, hedge trimming, garden maintenance and pressure washing for homes, strata and commercial properties across Western Sydney. One local crew, a schedule you can rely on, and a fixed price before we start.</p>
       <div class="btn-group fadeup" data-d="3">
         <a class="btn btn--lg" href="#quote">Get a Free Quote</a>
-        <a class="btn btn--ghost btn--lg" href="tel:${business.phoneRaw}">${strokeIcon('phone')} Call ${business.phone}</a>
+        <a class="btn btn--ghost btn--lg" href="tel:${business.phoneRaw}">${strokeIcon('phone')} <span class="hide-xs">Call&nbsp;</span>${business.phone}</a>
       </div>
       <ul class="hero__trust fadeup" data-d="4">
         <li>${strokeIcon('shield')} Fully insured</li>

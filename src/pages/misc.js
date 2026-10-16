@@ -102,7 +102,7 @@ ${subHero({ imgKey: 'ride-on-driveway', alt: 'Ride-on mowing across Greater Sydn
       <article class="service-card reveal" data-d="${(i % 2) + 1}" id="${a.slug}">
         <div class="service-card__media">${img(areaImgs[a.slug], { alt: `Lawn mowing and garden maintenance in ${a.name} by Greater Sydney Landscapes`, sizes: '(max-width: 640px) 100vw, 50vw' })}<span class="service-card__icon">${icon('pin')}</span></div>
         <div class="service-card__body">
-          <h2 style="font-size:1.35rem">Lawn mowing &amp; garden care in ${esc(a.name)}${a.home ? ' <span class="badge" style="font-size:.7rem;vertical-align:middle">Home base</span>' : ''}</h2>
+          <h2 style="font-size:1.35rem">Lawn mowing &amp; garden care in ${esc(a.name)}${a.home ? ' <span class="badge" style="font-size:.75rem;vertical-align:middle">Home base</span>' : ''}</h2>
           <p>${esc(a.blurb)}</p>
           <div class="btn-group"><a class="btn" href="/contact/#quote">Quote for ${esc(a.name)}</a><a class="link-arrow" href="/services/lawn-mowing/">Lawn mowing ${icon('arrow')}</a></div>
         </div>
