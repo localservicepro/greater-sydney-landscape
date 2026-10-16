@@ -281,8 +281,8 @@ p { margin: 0 0 1.1em; }
 }
 @media (max-width: 640px) {
   /* Hero CTAs side by side on phones */
-  .hero .btn-group { flex-wrap: nowrap; gap: 10px; }
-  .hero .btn-group .btn { flex: 1 1 0; min-width: 0; padding: 15px 6px; min-height: 52px; font-size: .8rem; letter-spacing: 0; gap: 6px; }
+  .hero .btn-group { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px; }
+  .hero .btn-group .btn { width: 100%; min-width: 0; padding: 15px 6px; min-height: 52px; font-size: .8rem; letter-spacing: 0; gap: 6px; }
   .hero .btn-group .btn svg { width: 16px; height: 16px; }
 }
 @media (max-width: 480px) {

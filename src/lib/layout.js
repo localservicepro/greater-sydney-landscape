@@ -2,6 +2,11 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { business, address, areas, services, foldedServices, serviceList } from '../data/site.js';
+import { createHash } from 'node:crypto';
+const __assets = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'assets');
+const assetVersion = (rel) => createHash('md5').update(fs.readFileSync(path.join(__assets, rel))).digest('hex').slice(0, 8);
+const CSS_V = assetVersion('css/main.css');
+const JS_V = assetVersion('js/main.js');
 import { icon } from './icons.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -356,7 +361,7 @@ export function page({ path: p, title, description, body, schema = [], light = f
 <link rel="preload" href="/assets/fonts/montserrat-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
 ${preloadImage ? imgPreload(preloadImage) : ''}
-<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/main.css?v=${CSS_V}">
 ${ld.map((s) => `<script type="application/ld+json">${JSON.stringify(s)}</script>`).join('\n')}
 <script src="https://link.msgsndr.com/js/external-tracking.js" data-tracking-id="${business.ghlTrackingId}"> </script>
 </head>
@@ -366,7 +371,7 @@ ${header({ light, current })}
 ${body}
 </main>
 ${footer()}
-<script src="/assets/js/main.js" defer></script>
+<script src="/assets/js/main.js?v=${JS_V}" defer></script>
 </body>
 </html>`;
 }
