@@ -81,7 +81,7 @@ export function render({ generated }) {
       <div class="eyebrow">Lawn mowing &amp; garden care, done properly</div>
       <h2 id="intro-heading">Lawn mowing in Sydney that turns up, every time</h2>
       <span class="stripe"></span>
-      <p class="lede">Greater Sydney Landscapes provides fortnightly and monthly lawn mowing across Toongabbie, Parramatta, Blacktown and The Hills from our base at ${esc(address)}. We also trim hedges, maintain gardens for homes and strata blocks, fertilise and weed-spray lawns, pressure wash driveways and take on landscaping projects.</p>
+      <p class="lede">Greater Sydney Landscapes provides fortnightly and monthly lawn mowing across Toongabbie, Parramatta, Blacktown and The Hills from our base in ${esc(business.suburb)}. We also trim hedges, maintain gardens for homes and strata blocks, fertilise and weed-spray lawns, pressure wash driveways and take on landscaping projects.</p>
       <p>If you have ever waited around for a lawn mowing service in Sydney that never showed, you know why we built the business the way we did. You get a set schedule, a text before we arrive, a crew that does the edges and blows the paths every visit, and one invoice. No chasing, no surprises, no mess left behind.</p>
       <ul class="checks" style="margin-top:18px">
         <li>Local crew based in Toongabbie, not a call centre</li>
@@ -185,7 +185,7 @@ export function render({ generated }) {
       <div class="eyebrow">Where we work</div>
       <h2 id="areas-heading">Lawn mowing and garden services across Greater Sydney</h2>
       <span class="stripe"></span>
-      <p class="lede">We are based at ${esc(address)} and run regular rounds through Toongabbie, Parramatta, Blacktown, The Hills, Hornsby, Dural and the Inner West. Not sure if we cover your street? Ask, we probably do.</p>
+      <p class="lede">We are based in ${esc(address)} and run regular rounds through Toongabbie, Parramatta, Blacktown, The Hills, Hornsby, Dural and the Inner West. Not sure if we cover your street? Ask, we probably do.</p>
     </div>
     <div class="areas__layout">
       <div class="reveal" data-d="1">${routeMapFigure()}</div>
@@ -241,7 +241,7 @@ export function render({ generated }) {
         <div class="info-row"><div class="ico">${strokeIcon('phone')}</div><div><strong>Phone</strong><a href="tel:${business.phoneRaw}">${business.phone}</a></div></div>
         <div class="info-row"><div class="ico">${strokeIcon('message')}</div><div><strong>WhatsApp</strong><a href="${business.whatsapp}" target="_blank" rel="noopener">Message us on WhatsApp</a></div></div>
         <div class="info-row"><div class="ico">${strokeIcon('mail')}</div><div><strong>Email</strong><a href="mailto:${business.email}">${business.email}</a></div></div>
-        <div class="info-row"><div class="ico">${strokeIcon('pin')}</div><div><strong>Based at</strong><a href="${business.gmb}" target="_blank" rel="noopener">${esc(address)}</a></div></div>
+        <div class="info-row"><div class="ico">${strokeIcon('pin')}</div><div><strong>Based in</strong><a href="${business.gmb}" target="_blank" rel="noopener">${esc(address)}</a></div></div>
         <div class="info-row"><div class="ico">${strokeIcon('clock')}</div><div><strong>Hours</strong><table class="hours-table">${business.hoursDisplay.map(([d, h]) => `<tr><td>${d}</td><td>${h}</td></tr>`).join('')}</table></div></div>
       </div>
     </div>

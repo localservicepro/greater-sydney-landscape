@@ -47,7 +47,6 @@ export const localBusinessSchema = () => ({
   founder: { '@type': 'Person', name: business.owner },
   address: {
     '@type': 'PostalAddress',
-    streetAddress: business.street,
     addressLocality: business.suburb,
     addressRegion: business.state,
     postalCode: business.postcode,

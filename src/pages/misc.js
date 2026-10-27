@@ -28,7 +28,7 @@ ${subHero({ imgKey: 'ute-and-mower', alt: 'Greater Sydney Landscapes ute and rid
       <div class="eyebrow">Who we are</div>
       <h2>Local, insured and easy to deal with</h2>
       <span class="stripe"></span>
-      <p class="lede">Greater Sydney Landscapes works out of ${esc(address)}, with ${esc(business.owner)} as your point of contact from the first quote to the final invoice. We started with lawn mowing rounds around Toongabbie, Pendle Hill and Wentworthville and grew, mostly by word of mouth, into hedge trimming, garden maintenance, lawn care, pressure washing and landscaping across Parramatta, Blacktown, The Hills, Hornsby, Dural and the Inner West.</p>
+      <p class="lede">Greater Sydney Landscapes is based in ${esc(address)}, with ${esc(business.owner)} as your point of contact from the first quote to the final invoice. We started with lawn mowing rounds around Toongabbie, Pendle Hill and Wentworthville and grew, mostly by word of mouth, into hedge trimming, garden maintenance, lawn care, pressure washing and landscaping across Parramatta, Blacktown, The Hills, Hornsby, Dural and the Inner West.</p>
       <p>We are not a franchise. The people who quote your property are the people who turn up to do the work, with the right gear for the job, from push mowers for tight townhouse lawns to ride-on mowers for acreage out towards Dural.</p>
       <p>We hold the qualifications and insurances you would expect for residential, strata and commercial work, and we are happy to send certificates of currency to strata managers and property managers before we start.</p>
     </div>
@@ -93,7 +93,7 @@ ${subHero({ imgKey: 'ride-on-driveway', alt: 'Ride-on mowing across Greater Sydn
         <div class="eyebrow">Where we work</div>
         <h2>Based in Toongabbie, servicing seven regions of Greater Sydney</h2>
         <span class="stripe"></span>
-        <p class="lede">We keep our rounds tight so we can be reliable. Most of our lawn mowing, hedge trimming and garden maintenance customers are within 30 minutes of ${esc(address)}. If your suburb is not listed, ask: if it is on the way to one of our rounds, we can usually fit you in.</p>
+        <p class="lede">We keep our rounds tight so we can be reliable. Most of our lawn mowing, hedge trimming and garden maintenance customers are within 30 minutes of our base in ${esc(business.suburb)}. If your suburb is not listed, ask: if it is on the way to one of our rounds, we can usually fit you in.</p>
       </div>
       <div class="reveal" data-d="1">${routeMapFigure({ light: true })}</div>
     </div>
@@ -153,7 +153,7 @@ ${subHero({ imgKey: 'hero-lawn-hedge', alt: 'Contact Greater Sydney Landscapes f
         <div class="info-row"><div class="ico">${strokeIcon('phone')}</div><div><strong>Phone</strong><a href="tel:${business.phoneRaw}">${business.phone}</a></div></div>
         <div class="info-row"><div class="ico">${strokeIcon('message')}</div><div><strong>WhatsApp</strong><a href="${business.whatsapp}" target="_blank" rel="noopener">Message us on WhatsApp</a></div></div>
         <div class="info-row"><div class="ico">${strokeIcon('mail')}</div><div><strong>Email</strong><a href="mailto:${business.email}">${business.email}</a></div></div>
-        <div class="info-row"><div class="ico">${strokeIcon('pin')}</div><div><strong>Address</strong><a href="${business.gmb}" target="_blank" rel="noopener">${esc(address)}</a></div></div>
+        <div class="info-row"><div class="ico">${strokeIcon('pin')}</div><div><strong>Based in</strong><a href="${business.gmb}" target="_blank" rel="noopener">${esc(address)}</a></div></div>
         <div class="info-row"><div class="ico">${strokeIcon('clock')}</div><div><strong>Hours</strong><table class="hours-table">${business.hoursDisplay.map(([d, h]) => `<tr><td>${d}</td><td>${h}</td></tr>`).join('')}</table></div></div>
       </div>
       <div class="map-embed" style="margin-top:32px">${gmbMap()}</div>
@@ -165,7 +165,7 @@ ${subHero({ imgKey: 'hero-lawn-hedge', alt: 'Contact Greater Sydney Landscapes f
   return page({
     path: '/contact/',
     title: 'Contact & Free Quote | Greater Sydney Landscapes',
-    description: 'Get a free lawn mowing or garden maintenance quote. Call 0452 586 355, WhatsApp or send the form. 56 Ballandella Rd, Toongabbie NSW 2146.',
+    description: 'Get a free lawn mowing or garden maintenance quote. Call 0452 586 355, WhatsApp or send the form. Based in Toongabbie NSW 2146.',
     body,
     schema: [breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Contact', path: '/contact/' }])],
     current: 'contact',

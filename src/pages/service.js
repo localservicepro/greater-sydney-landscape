@@ -94,7 +94,7 @@ export function renderService(s, { generated }) {
       <div class="reveal" style="margin-top:40px">
         <h2>Where we offer ${esc(s.name.toLowerCase())}</h2>
         <span class="stripe"></span>
-        <p>${esc(s.name)} is available across ${areas.map((a) => a.name).slice(0, -1).join(', ')} and ${areas.slice(-1)[0].name}. We are based at ${esc(address)}, so most of Western Sydney is within a short drive. <a href="/areas/">See all service areas</a>.</p>
+        <p>${esc(s.name)} is available across ${areas.map((a) => a.name).slice(0, -1).join(', ')} and ${areas.slice(-1)[0].name}. We are based in ${esc(address)}, so most of Western Sydney is within a short drive. <a href="/areas/">See all service areas</a>.</p>
       </div>
       <div class="reveal" style="margin-top:40px">
         <h2>${esc(s.name)} FAQs</h2>
@@ -118,7 +118,7 @@ export function renderService(s, { generated }) {
       <div class="side-card reveal" data-d="2">
         <h3>Greater Sydney Landscapes</h3>
         <div class="contact__info">
-          <div class="info-row"><div class="ico">${strokeIcon('pin')}</div><div><strong>Address</strong>${esc(address)}</div></div>
+          <div class="info-row"><div class="ico">${strokeIcon('pin')}</div><div><strong>Based in</strong>${esc(address)}</div></div>
           <div class="info-row"><div class="ico">${strokeIcon('mail')}</div><div><strong>Email</strong><a href="mailto:${business.email}">${business.email}</a></div></div>
           <div class="info-row"><div class="ico">${strokeIcon('clock')}</div><div><strong>Hours</strong>Mon–Fri 7am–5pm, Sat 7am–2pm</div></div>
         </div>

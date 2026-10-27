@@ -10,12 +10,11 @@ export const business = {
   phoneRaw: '+61452586355',
   whatsapp: 'https://wa.me/61452586355',
   email: 'info@greatersydneylandscapes.com.au',
-  street: '56 Ballandella Rd',
   suburb: 'Toongabbie',
   state: 'NSW',
   postcode: '2146',
   country: 'AU',
-  geo: { lat: -33.7868, lng: 150.9513 },
+  geo: { lat: -33.7883, lng: 150.9517 },
   url: 'https://greatersydneylandscapes.com.au',
   gmb: 'https://share.google/NtZuEz8tixiG21wZv',
   facebook: 'https://www.facebook.com/profile.php?id=61553046714592',
@@ -34,7 +33,8 @@ export const business = {
   ],
 };
 
-export const address = `${business.street}, ${business.suburb} ${business.state} ${business.postcode}`;
+// Public address is suburb-level only (the business runs from a private home).
+export const address = `${business.suburb} ${business.state} ${business.postcode}`;
 
 // Service areas. Toongabbie is home base; the seven below are the agreed service regions.
 export const areas = [
@@ -75,7 +75,7 @@ export const services = [
       'Ride-on mowing for blocks over 800 m²',
     ],
     related: ['lawn-care', 'garden-maintenance'],
-    intro: `Looking for lawn mowing in Blacktown that actually turns up? Greater Sydney Landscapes runs regular mowing rounds across Blacktown, Toongabbie, Seven Hills, Parramatta and The Hills from our base at 56 Ballandella Rd, Toongabbie. You pick the schedule, we keep to it, and your lawn stays cut, edged and tidy without you having to chase anyone.`,
+    intro: `Looking for lawn mowing in Blacktown that actually turns up? Greater Sydney Landscapes runs regular mowing rounds across Blacktown, Toongabbie, Seven Hills, Parramatta and The Hills from our base in Toongabbie. You pick the schedule, we keep to it, and your lawn stays cut, edged and tidy without you having to chase anyone.`,
     sections: [
       {
         heading: 'Regular lawn mowing services in Blacktown and surrounds',
@@ -367,7 +367,7 @@ export const home = {
     },
     {
       q: 'Which areas of Sydney does Greater Sydney Landscapes service?',
-      a: 'We are based at 56 Ballandella Rd, Toongabbie and service Toongabbie, Parramatta, Blacktown, The Hills, Hornsby, Dural and the Inner West, with larger landscaping projects across wider Sydney by arrangement.',
+      a: 'We are based in Toongabbie and service Toongabbie, Parramatta, Blacktown, The Hills, Hornsby, Dural and the Inner West, with larger landscaping projects across wider Sydney by arrangement.',
     },
   ],
 };
