@@ -1,5 +1,5 @@
 import { business, address, areas, services, foldedServices, home } from '../data/site.js';
-import { page, img, esc, faqBlock, faqSchema, quoteForm, ctaBand, abs, routeMapFigure } from '../lib/layout.js';
+import { page, img, esc, faqBlock, faqSchema, quoteForm, ctaBand, abs, routeMapFigure, reviewWidget } from '../lib/layout.js';
 import { icon } from '../lib/icons.js';
 
 const strokeIcon = (name) => icon(name).replace('<svg', '<svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"');
@@ -216,6 +216,9 @@ export function render({ generated }) {
         <span class="badge">${strokeIcon('check')} Acreage &amp; rural-residential</span>
       </div>
     </div>
+  </div>
+  <div class="container">
+    <div class="review-widget reveal" id="reviews">${reviewWidget()}</div>
   </div>
 </section>
 

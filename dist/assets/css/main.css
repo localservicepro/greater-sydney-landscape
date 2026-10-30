@@ -464,6 +464,8 @@ p { margin: 0 0 1.1em; }
 .proof__card .stars { display: flex; gap: 4px; margin-bottom: 14px; }
 .proof__card .stars svg { width: 24px; height: 24px; fill: var(--lime); }
 @media (max-width: 900px) { .proof { grid-template-columns: minmax(0, 1fr); } }
+.review-widget { margin-top: clamp(40px, 6vw, 72px); }
+.review-widget iframe { display: block; width: 100%; min-height: 420px; border: 0; }
 
 /* ---------- FAQ ---------- */
 .faq { max-width: 860px; margin-inline: auto; }

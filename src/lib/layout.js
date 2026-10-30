@@ -149,6 +149,10 @@ export function routeMapFigure({ focus = [], alt = '', light = false } = {}) {
 }
 
 /* ---------- Shared markup ---------- */
+// Reviews widget supplied by the client (ReputationHub / GHL). The script sizes the iframe to its content.
+export const reviewWidget = () => `<iframe class="lc_reviews_widget" src="https://reputationhub.site/reputation/widgets/review_widget/hxBiznDzJDX1axVNbS9J" title="Greater Sydney Landscapes customer reviews" frameborder="0" scrolling="no" style="min-width:100%;width:100%;"></iframe>
+<script type="text/javascript" src="https://reputationhub.site/reputation/assets/review-widget.js" defer></script>`;
+
 // Google Business Profile map embed supplied by the client (listing: Greater Sydney Landscapes).
 export const gmbMap = () => `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53118.815010268016!2d151.04147145!3d-33.68498185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x651a2fd37caddaa9%3A0xfc972c2d9df3abde!2sGreater%20Sydney%20Landscapes!5e0!3m2!1sen!2sph!4v1792074629657!5m2!1sen!2sph" title="Greater Sydney Landscapes on Google Maps" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>`;
 
