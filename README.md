@@ -1,6 +1,6 @@
 # Greater Sydney Landscapes — website
 
-Static, dependency-free rebuild of [greatersydneylandscapes.com.au](https://greatersydneylandscapes.com.au/), built against the Step 1 SEO research report (primary target: *lawn mowing sydney*).
+Static, dependency-free rebuild of [greatersydneylandscapes.com.au](https://www.greatersydneylandscapes.com.au/), built against the Step 1 SEO research report (primary target: *lawn mowing sydney*).
 
 ## Structure
 

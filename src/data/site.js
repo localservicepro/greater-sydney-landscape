@@ -15,7 +15,7 @@ export const business = {
   postcode: '2146',
   country: 'AU',
   geo: { lat: -33.7883, lng: 150.9517 },
-  url: 'https://greatersydneylandscapes.com.au',
+  url: 'https://www.greatersydneylandscapes.com.au',
   gmb: 'https://share.google/NtZuEz8tixiG21wZv',
   facebook: 'https://www.facebook.com/profile.php?id=61553046714592',
   instagram: 'https://www.instagram.com/greatersydneylandscapes/',

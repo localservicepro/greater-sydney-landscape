@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /thank-you/
 
-Sitemap: https://greatersydneylandscapes.com.au/sitemap.xml
+Sitemap: https://www.greatersydneylandscapes.com.au/sitemap.xml

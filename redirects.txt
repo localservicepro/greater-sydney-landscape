@@ -2,8 +2,8 @@
 # The previous GoDaddy site was a single page at "/", so the homepage URL is preserved as-is.
 # These rules catch builder-style and legacy variants so nothing 404s after cut-over.
 
-# Canonical host (www -> apex)
-https://www.greatersydneylandscapes.com.au/*  https://greatersydneylandscapes.com.au/:splat  301!
+# Canonical host (apex -> www)
+https://greatersydneylandscapes.com.au/*  https://www.greatersydneylandscapes.com.au/:splat  301!
 
 # Legacy / builder URL variants -> new clean URLs
 /index.html            /                       301
