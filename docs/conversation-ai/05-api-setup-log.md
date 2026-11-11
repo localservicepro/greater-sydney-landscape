@@ -77,3 +77,7 @@ When a value changes, also update the knowledge base (FAQ entries and the PDF/fi
 
 - Booking action "Book a quote call with Daniel" (`gTFOadCl5dWY7Ln6hqlg`) uses the "2 Minute Quote Calls" calendar (`1Eskvi4eJZfBJ0jTvj41`). It triggers no workflow, does not pause Kiley after booking, and does not allow rescheduling or cancelling in chat. Backup of the calendar before any change: `backup/calendar-quote-calls.json`.
 - **Not bookable yet:** the calendar has no user assigned, so GHL returns "No users found in the calendar" and offers no times. Assign Daniel in Calendars → 2 Minute Quote Calls → Team/Availability.
+
+## Knowledge base PDF refresh
+
+`03-knowledge-base.pdf` was rebuilt from `03-knowledge-base.md` (pandoc to HTML, printed to A4 PDF in Chromium) after the photos answer changed. The new file (`QJSOV4lermUZ1oAlShfK`, 11 chunks) is processed in the knowledge base, and the old upload (`GGEQeRwEsXepxkCeAjNS`) was removed so the two versions don't conflict.
