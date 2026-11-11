@@ -72,3 +72,8 @@ When a value changes, also update the knowledge base (FAQ entries and the PDF/fi
 - Auto-pilot message limit raised from 10 to 30 so a full quote conversation (about 18 replies) isn't cut off. Kiley has no working-hours restriction set.
 - Quote-call booking action: not added yet. It needs a calendar ID, and the token lacks the Calendars scope.
 - Testing: messages added through the API (Live Chat, WebChat and SMS types were tried) do not trigger Conversation AI, so tests must be run in Kiley's "Test your agent" panel or on the live site.
+
+## Quote-call booking
+
+- Booking action "Book a quote call with Daniel" (`gTFOadCl5dWY7Ln6hqlg`) uses the "2 Minute Quote Calls" calendar (`1Eskvi4eJZfBJ0jTvj41`). It triggers no workflow, does not pause Kiley after booking, and does not allow rescheduling or cancelling in chat. Backup of the calendar before any change: `backup/calendar-quote-calls.json`.
+- **Not bookable yet:** the calendar has no user assigned, so GHL returns "No users found in the calendar" and offers no times. Assign Daniel in Calendars → 2 Minute Quote Calls → Team/Availability.
