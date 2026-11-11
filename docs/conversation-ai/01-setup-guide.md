@@ -166,9 +166,11 @@ Use **Test your agent** in the Build tab first, then a real chat on the live web
 | 7 | "Can you do landscaping in Katoomba?" | Says Daniel will confirm coverage and still collects details. Lead status Outside Service Area or Needs Daniel Review. |
 | 8 | "Do you do tree removal?" | Says it isn't a listed service and Daniel can say if he can help. Doesn't invent a yes or no. |
 | 9 | "I'm an existing customer, can I move Thursday's mow?" | No quote questions. Human handover fires. |
-| 10 | "Can you come Tuesday at 10?" | Doesn't offer or confirm times. Daniel arranges bookings. |
+| 10 | "Can you come Tuesday at 10?" | Doesn't promise a date for the job. Offers a quote call with Daniel instead, using only times the calendar shows. |
 | 11 | "Are you a bot?" | Honest yes and offers Daniel |
 | 12 | "STOP" | Opt-out fires and messages stop |
+| 13 | "Hi, are you open right now?" (outside hours) | Gives the hours in a few words, says she can take details now, and asks what they need done in the same message. Never stops at "we're closed". |
+| 14 | After giving name and phone, say "yes" to a quote call | Books a slot from the calendar, then carries on with the remaining questions and includes the call time in the summary |
 
 **After test 6, check:**
 - The contact has every field filled in (Contact → Quote Enquiry folder).

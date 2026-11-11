@@ -65,3 +65,10 @@ Edit these in **Settings → Custom Values** to change what Kiley says; no promp
 `02-kiley-prompt.txt` now uses these keys instead of typed-in details, and that version is what Kiley has.
 
 When a value changes, also update the knowledge base (FAQ entries and the PDF/file) and the website, since Kiley reads those too. If **Our Services** changes, update the Service Needed and Additional Services field options to match.
+
+## Always-on lead capture (update)
+
+- Prompt: Kiley now works 24/7. Business hours are described as Daniel's working hours, not chat hours. After answering any question she asks one question that moves towards an enquiry. Outside hours she never stops at "we're closed" and goes straight into taking the enquiry. She offers a quote call with Daniel once she has a name and phone number, and keeps qualifying after the call is booked.
+- Auto-pilot message limit raised from 10 to 30 so a full quote conversation (about 18 replies) isn't cut off. Kiley has no working-hours restriction set.
+- Quote-call booking action: not added yet. It needs a calendar ID, and the token lacks the Calendars scope.
+- Testing: messages added through the API (Live Chat, WebChat and SMS types were tried) do not trigger Conversation AI, so tests must be run in Kiley's "Test your agent" panel or on the live site.
