@@ -85,3 +85,10 @@ When a value changes, also update the knowledge base (FAQ entries and the PDF/fi
 ## Shorter quote flow
 
 Testing showed leads dropping off at the length of the old flow (8 form questions plus up to 8 qualifying questions), and Kiley re-asking details. The prompt now asks only: service, suburb, first name, mobile (email only if no mobile), a quick job description with an invitation to attach photos, and at most one of "one-off or regular?" / "when are you hoping to get it done?". Then a quote-call offer, a one-line confirmation and a one-sentence close. Messages are capped at about 25 words. Address, size, property type, role, condition, access, budget and contact preference are no longer asked, but are still saved if the customer mentions them.
+
+## Chat summary for Daniel's alert
+
+- New field **Chat Summary** (`contact.chat_summary`, multi line, id `tOWyHbRSfbWSR6Eaw74q`) and Contact Info action "Confirmation – Chat Summary" (`3y2CUkMEVPWV3xYGaSb0`). Kiley writes a two or three sentence summary when the customer confirms, before triggering the workflow.
+- The Trigger a Workflow action still uses "GSL - AI Confirmed Enquiry - Daniel Alerts"; its condition now requires the Chat Summary to be saved first.
+- GHL's built-in conversation summary (`contact.conversation_ai_summary`) is written only after 15 minutes of inactivity, so it can't be used in an alert sent at confirmation. Its settings can't be changed through the API.
+- Contact Info only fills empty fields, so a returning contact's Chat Summary keeps the first enquiry's text. Clear it in the workflow after the alert if repeat enquiries matter.
