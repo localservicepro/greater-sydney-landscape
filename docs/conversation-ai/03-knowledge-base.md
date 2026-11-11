@@ -302,7 +302,7 @@ You get one simple invoice at the end of each visit or once a month, whichever y
 Yes. You can change the schedule at any time by contacting Daniel.
 
 **Can I send photos?**
-Yes. Photos help Daniel price the job accurately. Send them in the chat if your chat window lets you attach files, by text or WhatsApp to 0452 586 355, or by email to info@greatersydneylandscapes.com.au.
+Yes. Photos help Daniel price the job accurately. Text or WhatsApp them to 0452 586 355, or email them to info@greatersydneylandscapes.com.au.
 
 ## 8. Things only Daniel can confirm
 
