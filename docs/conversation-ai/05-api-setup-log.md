@@ -43,3 +43,25 @@ Already existed with `03-knowledge-base.pdf` (processed, 12 chunks). Added: web 
 
 - **Workflow.** The public API can list workflows but not create or edit them. Build "Kiley | Chat quote enquiry → Daniel" by hand from step 3 of the setup guide (keys above are correct), or check that the existing "GSL - AI Confirmed Enquiry - Daniel Alerts" already does what step 3 says. Then point Kiley's Trigger a Workflow action at whichever one you keep.
 - **Testing.** Needs the Conversations and Conversation Messages scopes on the token.
+
+## Custom values (business details used in Kiley's prompt)
+
+Edit these in **Settings → Custom Values** to change what Kiley says; no prompt edit needed. Six existed and were empty, so they were filled in rather than duplicated; the rest are new.
+
+| Custom value | Key | Value |
+|---|---|---|
+| Company Name | `{{custom_values.company_name}}` | Greater Sydney Landscapes |
+| Owner Name | `{{custom_values.owner_name}}` | Daniel Longo |
+| Company Location | `{{custom_values.company_location}}` | Toongabbie NSW 2146 (never a street address) |
+| Company Phone | `{{custom_values.company_phone}}` | 0452 586 355 |
+| Company WhatsApp | `{{custom_values.company_whatsapp}}` | 0452 586 355 |
+| Company Email | `{{custom_values.company_email}}` | info@greatersydneylandscapes.com.au |
+| Company Website | `{{custom_values.company_website}}` | www.greatersydneylandscapes.com.au |
+| Service Area | `{{custom_values.service_area}}` | Toongabbie (home base), Parramatta, Blacktown, The Hills, Hornsby, Dural, the Inner West, and wider Sydney for larger landscaping and commercial jobs by arrangement |
+| Our Services | `{{custom_values.our_services}}` | Lawn Mowing, Hedge Trimming, Garden Maintenance, Weed Spraying, Plant & Lawn Fertilising, Pressure Washing, Landscaping Projects, Ride-On Mowing |
+| Business Hours | `{{custom_values.business_hours}}` | Monday to Friday 7am to 5pm, Saturday 7am to 2pm, Sunday closed |
+| Reply Time | `{{custom_values.reply_time}}` | within one business day, usually the same day |
+
+`02-kiley-prompt.txt` now uses these keys instead of typed-in details, and that version is what Kiley has.
+
+When a value changes, also update the knowledge base (FAQ entries and the PDF/file) and the website, since Kiley reads those too. If **Our Services** changes, update the Service Needed and Additional Services field options to match.
