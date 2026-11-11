@@ -81,3 +81,7 @@ When a value changes, also update the knowledge base (FAQ entries and the PDF/fi
 ## Knowledge base PDF refresh
 
 `03-knowledge-base.pdf` was rebuilt from `03-knowledge-base.md` (pandoc to HTML, printed to A4 PDF in Chromium) after the photos answer changed. The new file (`QJSOV4lermUZ1oAlShfK`, 11 chunks) is processed in the knowledge base, and the old upload (`GGEQeRwEsXepxkCeAjNS`) was removed so the two versions don't conflict.
+
+## Shorter quote flow
+
+Testing showed leads dropping off at the length of the old flow (8 form questions plus up to 8 qualifying questions), and Kiley re-asking details. The prompt now asks only: service, suburb, first name, mobile (email only if no mobile), a quick job description with an invitation to attach photos, and at most one of "one-off or regular?" / "when are you hoping to get it done?". Then a quote-call offer, a one-line confirmation and a one-sentence close. Messages are capped at about 25 words. Address, size, property type, role, condition, access, budget and contact preference are no longer asked, but are still saved if the customer mentions them.
