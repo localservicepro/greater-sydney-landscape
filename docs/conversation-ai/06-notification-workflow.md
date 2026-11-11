@@ -6,7 +6,7 @@ Daniel gets a text and an email for every website chat lead: straight away when 
 |---|---|---|
 | Name | Kiley \| Confirmed lead → Daniel (the existing workflow `42be1832…`, renamed) | Kiley \| Unfinished chat → Daniel (new) |
 | Started by | Kiley's "Confirmed quote enquiry – notify Daniel" action | Kiley's Summary Settings, 15 min after a chat goes quiet |
-| Summary used | `{{contact.chat_summary}}` (Kiley writes it at confirmation) | `{{contact.conversation_ai_summary}}` (GHL writes it) |
+| Summary used | `{{contact.chat_summary}}`, written by Kiley at confirmation | `{{contact.chat_summary}}`, written by GHL's summary when Kiley didn't |
 
 A confirmed chat also produces a summary later. Workflow 1 adds the tag `kiley-confirmed`; Workflow 2 sees it, sends nothing, and removes the tag so the next enquiry from that person works normally.
 
@@ -55,7 +55,7 @@ Create from scratch, name **Kiley | Unfinished chat → Daniel**:
 4. **Internal Notification, SMS** to Daniel Longo:
    ```
    Unfinished website chat: {{contact.name}} {{contact.phone}} left before confirming.
-   {{contact.conversation_ai_summary}}
+   {{contact.chat_summary}}
    ```
 5. **Internal Notification, Email** to Daniel Longo. Subject `Unfinished chat – {{contact.name}} – follow up`:
    ```
@@ -68,7 +68,7 @@ Create from scratch, name **Kiley | Unfinished chat → Daniel**:
    Suburb: {{contact.suburb}}
 
    Chat summary:
-   {{contact.conversation_ai_summary}}
+   {{contact.chat_summary}}
    ```
 6. Settings: Allow re-entry **On**, Stop on response **Off**. Publish.
 
@@ -78,9 +78,9 @@ Create from scratch, name **Kiley | Unfinished chat → Daniel**:
 |---|---|
 | Enable Conversation Summary | On |
 | When to generate | 15 minutes of inactivity, minimum 3 messages |
-| Custom field | Conversation AI Summary (not Chat Summary) |
+| Save to custom field | On, Chat Summary (the same field Kiley writes, so both workflows use `{{contact.chat_summary}}`) |
 | Email notification | Off (Workflow 2 emails Daniel) |
-| Workflow | Kiley \| Unfinished chat → Daniel |
+| Trigger a workflow when summary is ready | On, Kiley \| Unfinished chat → Daniel (publish Workflow 2 first; only published workflows are listed) |
 
 ## Rules and test
 
