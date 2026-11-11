@@ -1,0 +1,21 @@
+{
+  "data": {
+    "updatedAt": "2026-10-15T13:23:33.069Z",
+    "createdAt": "2026-10-15T13:23:33.069Z",
+    "name": "Update Suburb",
+    "type": "updateContactField",
+    "snapshotOriginId": "ME5x8LG1Pv8HEAa2qq7I",
+    "details": {
+      "contactFieldId": "n840OVh6hd6Z0P4GfGIh",
+      "description": "Suburb of the contact",
+      "contactUpdateExamples": [
+        "Banora Point",
+        "Bilambil Heights",
+        "Tweed Heads"
+      ]
+    },
+    "agentId": "DWddiXECUA3yLyBpkQhM",
+    "id": "XxnAFt1rkrDmDw8JkiU4"
+  },
+  "success": true
+}

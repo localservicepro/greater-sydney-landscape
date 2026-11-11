@@ -1,0 +1,28 @@
+{
+  "data": {
+    "updatedAt": "2026-11-02T03:56:13.530Z",
+    "createdAt": "2026-11-02T03:56:13.530Z",
+    "name": "Goodbye Detection",
+    "type": "stopBot",
+    "details": {
+      "stopBotExamples": [
+        "Bye",
+        "Goodbye",
+        "Thank you! have a nice day"
+      ],
+      "stopBotDetectionType": "Goodbye",
+      "stopBotTriggerCondition": "When the contact says goodbye or similar phrases ",
+      "finalMessage": "Thank you for your time, Have a nice day.",
+      "enabled": false,
+      "reactivateEnabled": true,
+      "sleepTimeUnit": "hours",
+      "sleepTime": 24,
+      "tags": [
+        "stop bot"
+      ]
+    },
+    "agentId": "DWddiXECUA3yLyBpkQhM",
+    "id": "b2b10OISXokcoNBUROUt"
+  },
+  "success": true
+}
