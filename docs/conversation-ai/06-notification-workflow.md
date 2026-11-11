@@ -1,153 +1,94 @@
-# Daniel's chat alerts: workflow and summary settings
+# Daniel's chat alerts: workflows and summary settings
 
-One workflow, **Kiley | Chat summary → Daniel**, sends every chat alert. Two things start it:
+Daniel gets a text and an email for every website chat lead: straight away when the customer confirms, or about 15 minutes after they leave a chat unfinished. This takes two workflows with one If/Else between them.
 
-1. **Kiley's "Confirmed quote enquiry – notify Daniel" action**, the moment a customer confirms. Kiley has already saved her **Chat Summary**.
-2. **Conversation Summary** (Kiley's Summary Settings), after a chat has gone quiet. GHL saves the **Conversation AI Summary**. This catches people who left before confirming.
-
-Tags stop Daniel getting the same lead twice: a confirmed lead is not alerted again when the summary arrives later.
-
-## Fields used
-
-| Field | Key | Filled by |
+| | Workflow 1: Confirmed lead | Workflow 2: Unfinished chat |
 |---|---|---|
-| Name, Phone, Email | `{{contact.name}}` `{{contact.phone}}` `{{contact.email}}` | Kiley (standard fields) |
-| Service Needed | `{{contact.service_needed}}` | Kiley |
-| Suburb | `{{contact.suburb}}` | Kiley |
-| Job Notes | `{{contact.job_notes}}` | Kiley |
-| Chat Lead Status | `{{contact.chat_lead_status}}` | Kiley, at confirmation |
-| Chat Summary | `{{contact.chat_summary}}` | Kiley, at confirmation |
-| Conversation AI Summary | `{{contact.conversation_ai_summary}}` | GHL, after the chat goes quiet |
+| Name | Kiley \| Confirmed lead → Daniel (the existing workflow `42be1832…`, renamed) | Kiley \| Unfinished chat → Daniel (new) |
+| Started by | Kiley's "Confirmed quote enquiry – notify Daniel" action | Kiley's Summary Settings, 15 min after a chat goes quiet |
+| Summary used | `{{contact.chat_summary}}` (Kiley writes it at confirmation) | `{{contact.conversation_ai_summary}}` (GHL writes it) |
 
-## Part 1: Kiley → Summary Settings
+A confirmed chat also produces a summary later. Workflow 1 adds the tag `kiley-confirmed`; Workflow 2 sees it, sends nothing, and removes the tag so the next enquiry from that person works normally.
+
+## Workflow 1: Confirmed lead
+
+Open the existing workflow, rename it **Kiley | Confirmed lead → Daniel**, remove the old steps, and add:
+
+1. No trigger.
+2. **Wait**: time delay, 1 minute.
+3. **Add Contact Tag**: `kiley-confirmed`, `chat-enquiry`.
+4. **Create/Update Opportunity**: Operations Pipeline, stage New Enquiry, name `{{contact.name}} – {{contact.service_needed}} – {{contact.suburb}}`, source `Website Chat`.
+5. **Assign to User**: Daniel Longo (only unassigned, if offered).
+6. **Internal Notification, SMS** to Daniel Longo:
+   ```
+   New chat lead: {{contact.name}} {{contact.phone}}
+   {{contact.service_needed}} in {{contact.suburb}}
+   {{contact.chat_summary}}
+   ```
+7. **Internal Notification, Email** to Daniel Longo. Subject `New chat lead – {{contact.name}} – {{contact.suburb}}`:
+   ```
+   {{contact.name}} confirmed a quote enquiry in the website chat.
+
+   Name: {{contact.name}}
+   Mobile: {{contact.phone}}
+   Email: {{contact.email}}
+   Service: {{contact.service_needed}}
+   Suburb: {{contact.suburb}}
+
+   Summary:
+   {{contact.chat_summary}}
+
+   Job notes:
+   {{contact.job_notes}}
+   ```
+8. Settings: Allow re-entry **On**, Stop on response **Off**. Publish.
+
+## Workflow 2: Unfinished chat
+
+Create from scratch, name **Kiley | Unfinished chat → Daniel**:
+
+1. No trigger.
+2. **Wait**: time delay, 1 minute.
+3. **If/Else**: branch "Already confirmed", condition Contact Tag includes `kiley-confirmed`.
+   - **Already confirmed** path: **Remove Contact Tag** `kiley-confirmed`. Nothing else.
+   - **None** path: steps 4 and 5.
+4. **Internal Notification, SMS** to Daniel Longo:
+   ```
+   Unfinished website chat: {{contact.name}} {{contact.phone}} left before confirming.
+   {{contact.conversation_ai_summary}}
+   ```
+5. **Internal Notification, Email** to Daniel Longo. Subject `Unfinished chat – {{contact.name}} – follow up`:
+   ```
+   {{contact.name}} started a website chat but left before confirming an enquiry.
+
+   Name: {{contact.name}}
+   Mobile: {{contact.phone}}
+   Email: {{contact.email}}
+   Service: {{contact.service_needed}}
+   Suburb: {{contact.suburb}}
+
+   Chat summary:
+   {{contact.conversation_ai_summary}}
+   ```
+6. Settings: Allow re-entry **On**, Stop on response **Off**. Publish.
+
+## Kiley → Summary Settings
 
 | Setting | Value |
 |---|---|
 | Enable Conversation Summary | On |
-| When to generate | After **15 minutes** of inactivity, minimum **3** messages |
-| Custom field | **Conversation AI Summary** (not Chat Summary, which is Kiley's own) |
-| Email notification for conversation summary | **Off**. The workflow below emails Daniel, so this would double up |
-| Workflow | **Kiley \| Chat summary → Daniel** |
+| When to generate | 15 minutes of inactivity, minimum 3 messages |
+| Custom field | Conversation AI Summary (not Chat Summary) |
+| Email notification | Off (Workflow 2 emails Daniel) |
+| Workflow | Kiley \| Unfinished chat → Daniel |
 
-Save.
+## Rules and test
 
-## Part 2: The workflow
+- Never add a step that messages the customer.
+- Switch "Lead Qualification Menu" to Draft before testing, or it sends its menu into these chats.
+- Test on the live site in a private window (the "Test your agent" panel doesn't start workflows):
+  1. A confirmed chat produces one "New chat lead" alert, and Workflow 2 later takes the Already confirmed path with no second message.
+  2. A chat abandoned after giving a name and mobile produces "Unfinished website chat" about 15 minutes later.
+  3. Delete the test contacts.
 
-Open **Automation → Workflows → Kiley | Chat summary → Daniel**. Remove the old steps (or turn the workflow to Draft while you rebuild it), then set it up as follows.
-
-### Settings tab
-- **Allow re-entry:** On. The same contact can come through more than once (confirmation, then summary, then a new job months later).
-- **Stop on response:** Off.
-
-### Trigger
-None. Kiley's action and the Summary Settings start it.
-
-### Steps
-
-1. **Wait** 1 minute, so Kiley's fields finish saving.
-
-2. **If/Else: "Confirmed?"**, with condition **Chat Summary is not empty**.
-
-#### Branch A: Confirmed (Chat Summary is not empty)
-
-A1. **If/Else: "Already alerted?"**, with condition **Contact Tags include `kiley-confirmed`**.
-- Yes → **End** (the later summary run lands here).
-- No → carry on.
-
-A2. **Add Tags:** `kiley-confirmed`, `kiley-alerted`, `chat-enquiry`.
-
-A3. **If/Else: "Not a fit?"**, with condition **Chat Lead Status is Not a Fit**.
-- Yes → **Add Tag** `chat-not-a-fit` → go to step 3 (no alert).
-- No → carry on.
-
-A4. **Create/Update Opportunity**
-- Pipeline: **Operations Pipeline**. Stage: **New Enquiry**.
-- Name: `{{contact.name}} – {{contact.service_needed}} – {{contact.suburb}}`
-- Source: `Website Chat`
-
-A5. **Assign to User:** Daniel Longo. Turn on "only apply to unassigned contacts" if you see that option.
-
-A6. **Internal Notification: SMS** to user Daniel Longo:
-```
-New chat lead: {{contact.name}} {{contact.phone}}
-{{contact.service_needed}} in {{contact.suburb}} ({{contact.chat_lead_status}})
-{{contact.chat_summary}}
-```
-
-A7. **Internal Notification: Email** to user Daniel Longo.
-Subject: `New chat lead – {{contact.name}} – {{contact.suburb}}`
-```
-{{contact.name}} confirmed a quote enquiry in the website chat.
-
-Name: {{contact.name}}
-Mobile: {{contact.phone}}
-Email: {{contact.email}}
-Service: {{contact.service_needed}}
-Suburb: {{contact.suburb}}
-Lead status: {{contact.chat_lead_status}}
-
-Summary:
-{{contact.chat_summary}}
-
-Job notes:
-{{contact.job_notes}}
-```
-Then go to step 3.
-
-#### Branch B: Not confirmed (Chat Summary is empty)
-
-B1. **If/Else: "Already alerted?"**, with condition **Contact Tags include `kiley-alerted`**.
-- Yes → **End**.
-- No → carry on.
-
-B2. **If/Else: "Can Daniel reach them?"**, with condition **Phone is not empty OR Email is not empty**.
-- No → **End**. An anonymous chat with no contact details can't be followed up; Daniel can still read it in Conversations.
-- Yes → carry on.
-
-B3. **Add Tags:** `kiley-alerted`, `chat-unconfirmed`.
-
-B4. **Internal Notification: SMS** to user Daniel Longo:
-```
-Unfinished chat: {{contact.name}} {{contact.phone}} left before confirming.
-{{contact.conversation_ai_summary}}
-```
-
-B5. **Internal Notification: Email** to user Daniel Longo.
-Subject: `Unfinished chat – {{contact.name}} – follow up`
-```
-{{contact.name}} started a website chat but left before confirming an enquiry.
-
-Name: {{contact.name}}
-Mobile: {{contact.phone}}
-Email: {{contact.email}}
-Service: {{contact.service_needed}}
-Suburb: {{contact.suburb}}
-
-Chat summary:
-{{contact.conversation_ai_summary}}
-```
-Then go to step 3.
-
-#### 3. Reset for the next enquiry (both branches)
-
-3a. **Wait** 2 hours.
-
-3b. **Remove Tags:** `kiley-confirmed`, `kiley-alerted`.
-
-3c. **Update Contact Field:** clear **Chat Summary** and **Chat Lead Status** (set them to empty). Kiley's Contact Info actions only fill empty fields, so without this a returning customer's next enquiry would keep the old summary.
-
-**Publish.**
-
-## Rules
-
-- Do not add any step that messages the customer (SMS, email or chat). A workflow message to the contact can interrupt Kiley mid-chat.
-- In If/Else steps, pick the fields from the list rather than typing them.
-
-## Test
-
-1. In Kiley's "Test your agent" panel, run a quote to confirmation. Open the workflow's **Execution logs**: one run should take Branch A, and Daniel gets the SMS and email with the summary filled in. About 15 minutes later a second run should stop at A1.
-2. On the live site in a private window, give a name and mobile, then stop replying. After about 15 minutes, a run should take Branch B and Daniel gets the "Unfinished chat" alert.
-3. After 2 hours, check the test contact: both tags removed, Chat Summary and Chat Lead Status empty. If step 3c doesn't clear the fields, tell Claude.
-4. Delete the test contacts.
-
-The test panel may not save fields or start workflows. If test 1 shows nothing in the Execution logs, use the live site instead.
+**Known limit:** Kiley's Contact Info actions only fill empty fields, so a returning customer's Chat Summary keeps their first enquiry's text. If that becomes a problem, add an Update Contact Field step at the end of Workflow 1 that clears Chat Summary, and check it actually clears.
