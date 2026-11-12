@@ -112,3 +112,5 @@ Added cancellation and reschedule notifications by SMS and email, to both Daniel
 ## Reusable message templates
 
 All calendar notification texts are now in `templates/notifications.json`, together with the workflow alert texts and the custom values and fields they need. They use only GHL contact and appointment fields and custom values; a new custom value **Owner First Name** (`{{custom_values.owner_first_name}}` = Daniel) replaced the typed-in name. The 16 live SMS and email notifications on the quote call calendar were updated to match the file exactly (backup of the previous text: `backup/calendar-quote-calls-notifications-before-templates.json`).
+
+Email templates are now plain text (no bold or HTML around fields); GHL's editor rejects formatting inside merge fields. The live email notifications were updated to paragraphs and line breaks only. GHL also added its own three default "Appointment Confirmation" emails (to the contact, the assigned user and extra emails) on 12 Nov; they duplicate ours and should be switched off.
