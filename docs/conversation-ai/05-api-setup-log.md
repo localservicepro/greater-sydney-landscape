@@ -100,3 +100,5 @@ Kiley now asks, in order: suburb, home or commercial (saved to Property Type), t
 ## Quote call booking notifications
 
 On the "2 Minute Quote Calls" calendar, two notifications to the assigned user (Daniel) were added for new bookings: an email (`6af535b49690971a39a225eb`) and an SMS (`6af535b496909727d0a225ec`), both showing the call time, the customer's name, mobile, service and suburb; the email also shows home or commercial, address and the Chat Summary. The existing in-app notifications were kept. Backup of the notifications before the change: `backup/calendar-quote-calls-notifications.json`.
+
+Expanded on request: Daniel's booking SMS now includes home or commercial, address and the Chat Summary. Added, by SMS and email: a booking confirmation to the customer; a reminder to the customer 1 hour before the call; and a reminder to Daniel 15 minutes before with the customer's full details. Customer messages say Daniel will call them on their mobile and that they can reply to change the time; replies reach Kiley, whose prompt hands reschedules to Daniel.
