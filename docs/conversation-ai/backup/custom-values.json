@@ -1,0 +1,185 @@
+{
+  "customValues": [
+    {
+      "id": "9P3kTn1dmBV1eJmWdWW8",
+      "name": "Google Map",
+      "fieldKey": "{{ custom_values.google_map }}",
+      "locationId": "hxBiznDzJDX1axVNbS9J",
+      "documentType": "field"
+    },
+    {
+      "id": "Q2i8PCsyicft3k7HdZMF",
+      "name": "Service Area",
+      "fieldKey": "{{ custom_values.service_area }}",
+      "locationId": "hxBiznDzJDX1axVNbS9J",
+      "documentType": "field"
+    },
+    {
+      "id": "WXlsClm9ddaA62ZKBSnc",
+      "name": "Our Services",
+      "fieldKey": "{{ custom_values.our_services }}",
+      "locationId": "hxBiznDzJDX1axVNbS9J",
+      "documentType": "field"
+    },
+    {
+      "id": "YjenODxJTBXMDJ2lrOMa",
+      "name": "Job Match Survey Link",
+      "fieldKey": "{{ custom_values.job_match_survey_link }}",
+      "locationId": "hxBiznDzJDX1axVNbS9J",
+      "documentType": "field"
+    },
+    {
+      "id": "3R14Y4uZ79tzJTMVhOI9",
+      "name": "Company Name",
+      "fieldKey": "{{ custom_values.company_name }}",
+      "locationId": "hxBiznDzJDX1axVNbS9J",
+      "documentType": "field"
+    },
+    {
+      "id": "CrbvlfPJLyPw96gARvvK",
+      "name": "Pipeline Quoting Link",
+      "fieldKey": "{{ custom_values.quoting_pipeline_link }}",
+      "locationId": "hxBiznDzJDX1axVNbS9J",
+      "documentType": "field"
+    },
+    {
+      "id": "TyzSBQnnHBUCOfygqO5q",
+      "name": "Company Website",
+      "fieldKey": "{{ custom_values.company_website }}",
+      "locationId": "hxBiznDzJDX1axVNbS9J",
+      "documentType": "field"
+    },
+    {
+      "id": "bbZW2ExysKKxalv7Vx9n",
+      "name": "Terms",
+      "fieldKey": "{{ custom_values.terms }}",
+      "locationId": "hxBiznDzJDX1axVNbS9J",
+      "documentType": "field"
+    },
+    {
+      "id": "LgrtVffKxZ9gawmf184C",
+      "name": "Company Location",
+      "fieldKey": "{{ custom_values.company_location }}",
+      "locationId": "hxBiznDzJDX1axVNbS9J",
+      "documentType": "field"
+    },
+    {
+      "id": "eIbJ15pPPx9f3ep4Kznz",
+      "name": "Company Phone",
+      "fieldKey": "{{ custom_values.company_phone }}",
+      "locationId": "hxBiznDzJDX1axVNbS9J",
+      "documentType": "field"
+    },
+    {
+      "id": "pB48BShwqdmi4A7wyJeE",
+      "name": "Negative Feedback Request",
+      "fieldKey": "{{ custom_values.negative_feedback_request }}",
+      "locationId": "hxBiznDzJDX1axVNbS9J",
+      "documentType": "field"
+    },
+    {
+      "id": "X6Txkqsp5tzYeLCeIFBc",
+      "name": "Privacy",
+      "fieldKey": "{{ custom_values.privacy }}",
+      "locationId": "hxBiznDzJDX1axVNbS9J",
+      "documentType": "field"
+    },
+    {
+      "id": "3PkKISxgFzo172Dbdyx2",
+      "name": "Company Logo",
+      "fieldKey": "{{ custom_values.company_logo }}",
+      "locationId": "hxBiznDzJDX1axVNbS9J",
+      "documentType": "field",
+      "parentId": "QHDJJe0mu7IqgfpGAJSH"
+    },
+    {
+      "id": "O4VOvohk2tD29nn6Xh2w",
+      "name": "Review Google URL",
+      "fieldKey": "{{ custom_values.review_google_url }}",
+      "locationId": "hxBiznDzJDX1axVNbS9J",
+      "documentType": "field",
+      "parentId": "QHDJJe0mu7IqgfpGAJSH"
+    },
+    {
+      "id": "jfmkg9pbvmBxUYKZ0dzb",
+      "name": "Reputation Review Link",
+      "fieldKey": "{{ custom_values.reputation_review_link }}",
+      "value": "https://search.google.com/local/writereview?placeid=ChIJqdqtfNMvGmUR3qvznS0sl_w",
+      "locationId": "hxBiznDzJDX1axVNbS9J",
+      "documentType": "field",
+      "parentId": "QHDJJe0mu7IqgfpGAJSH"
+    },
+    {
+      "id": "HN22y9IfdMcYX5buoLEJ",
+      "name": "Background Photo",
+      "fieldKey": "{{ custom_values.background_photo }}",
+      "locationId": "hxBiznDzJDX1axVNbS9J",
+      "documentType": "field",
+      "parentId": "QHDJJe0mu7IqgfpGAJSH"
+    },
+    {
+      "id": "lsakwl2eHC4vQdn3JofC",
+      "name": "Brand Color",
+      "fieldKey": "{{ custom_values.brand_color }}",
+      "locationId": "hxBiznDzJDX1axVNbS9J",
+      "documentType": "field",
+      "parentId": "QHDJJe0mu7IqgfpGAJSH"
+    },
+    {
+      "id": "FhBesvIvauQ3nsNK5APg",
+      "name": "Giveaway Link",
+      "fieldKey": "{{ custom_values.giveaway_link }}",
+      "locationId": "hxBiznDzJDX1axVNbS9J",
+      "documentType": "field",
+      "parentId": "zhuaP8ZCjSb5yVaAgbSw"
+    },
+    {
+      "id": "cUOUBck1St63mPaai2Ss",
+      "name": "Quote Call Link",
+      "fieldKey": "{{ custom_values.quote_call_link }}",
+      "locationId": "hxBiznDzJDX1axVNbS9J",
+      "documentType": "field",
+      "parentId": "zhuaP8ZCjSb5yVaAgbSw"
+    },
+    {
+      "id": "bQdGoLSs0bb2SBqkJM6B",
+      "name": "Voucher Offer",
+      "fieldKey": "{{ custom_values.voucher_offer }}",
+      "locationId": "hxBiznDzJDX1axVNbS9J",
+      "documentType": "field",
+      "parentId": "zhuaP8ZCjSb5yVaAgbSw"
+    },
+    {
+      "id": "ZSjcKPeKDKRAsXFtsRmI",
+      "name": "Giveaway Entrant Page Image",
+      "fieldKey": "{{ custom_values.giveaway_entrant_page_image }}",
+      "locationId": "hxBiznDzJDX1axVNbS9J",
+      "documentType": "field",
+      "parentId": "zhuaP8ZCjSb5yVaAgbSw"
+    },
+    {
+      "id": "mGZCTezz6mlzrKg9wnfW",
+      "name": "Giveaway Name",
+      "fieldKey": "{{ custom_values.giveaway_name }}",
+      "locationId": "hxBiznDzJDX1axVNbS9J",
+      "documentType": "field",
+      "parentId": "zhuaP8ZCjSb5yVaAgbSw"
+    },
+    {
+      "id": "XvHW6fbCtoAJeNfzvd32",
+      "name": "Claim Voucher Link",
+      "fieldKey": "{{ custom_values.claim_voucher_link }}",
+      "locationId": "hxBiznDzJDX1axVNbS9J",
+      "documentType": "field",
+      "parentId": "zhuaP8ZCjSb5yVaAgbSw"
+    },
+    {
+      "id": "1PTnFUdlO822GAFrgj09",
+      "name": "Giveaway Ads Banner",
+      "fieldKey": "{{ custom_values.giveaway_ads_banner }}",
+      "locationId": "hxBiznDzJDX1axVNbS9J",
+      "documentType": "field",
+      "parentId": "zhuaP8ZCjSb5yVaAgbSw"
+    }
+  ]
+}

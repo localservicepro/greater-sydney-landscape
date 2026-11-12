@@ -1,0 +1,30 @@
+{
+  "data": {
+    "createdAt": "2026-11-02T00:07:59.301Z",
+    "name": "Human Requested",
+    "type": "humanHandOver",
+    "details": {
+      "enabled": true,
+      "triggerCondition": "Direct request to speak with human",
+      "examples": [
+        "I want to talk to the manager",
+        "I want to talk to a human"
+      ],
+      "assignToUserId": "tJuIfxNOTB60DHHTE21e",
+      "skipAssignToUser": false,
+      "createTask": true,
+      "finalMessage": "I’ll pass your request to Daniel and pause the AI here. You can also reach Greater Sydney Landscapes on 0452 586 355 or info@greatersydneylandscapes.com.au.",
+      "reactivateEnabled": false,
+      "sleepTimeUnit": null,
+      "sleepTime": null,
+      "tags": [
+        "human handover"
+      ],
+      "handoverType": "contactRequest"
+    },
+    "updatedAt": "2026-11-02T00:08:12.242Z",
+    "agentId": "DWddiXECUA3yLyBpkQhM",
+    "id": "jaLjDU5SiZL9sAZtqXor"
+  },
+  "success": true
+}

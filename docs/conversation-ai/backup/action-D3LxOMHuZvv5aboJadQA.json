@@ -1,0 +1,27 @@
+{
+  "data": {
+    "updatedAt": "2026-11-02T03:56:44.514Z",
+    "createdAt": "2026-11-02T03:56:44.514Z",
+    "name": "Opt-out - stop messages",
+    "type": "stopBot",
+    "details": {
+      "stopBotExamples": [
+        "STOP",
+        "Please do not contact me again"
+      ],
+      "stopBotDetectionType": "Custom",
+      "stopBotTriggerCondition": "The contact explicitly asks to stop messages, unsubscribe, opt out or not be contacted again. Do not trigger merely for stop trimming, stop by, or a service question.",
+      "finalMessage": "Understood. I’ll stop replying here.",
+      "enabled": true,
+      "reactivateEnabled": false,
+      "sleepTimeUnit": null,
+      "sleepTime": null,
+      "tags": [
+        "stop bot"
+      ]
+    },
+    "agentId": "DWddiXECUA3yLyBpkQhM",
+    "id": "D3LxOMHuZvv5aboJadQA"
+  },
+  "success": true
+}

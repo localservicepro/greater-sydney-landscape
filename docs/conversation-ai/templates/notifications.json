@@ -1,0 +1,179 @@
+{
+  "requires": {
+    "custom_values": {
+      "company_name": "Business name, e.g. Greater Sydney Landscapes",
+      "company_phone": "Business phone shown to customers",
+      "owner_first_name": "First name of the person who calls customers back, e.g. Daniel"
+    },
+    "custom_fields": {
+      "service_needed": "Service Needed (contact field)",
+      "suburb": "Suburb (contact field)",
+      "property_type": "Property Type (contact field)",
+      "property_address": "Property Address (contact field)",
+      "chat_summary": "Chat Summary (contact field, multi line)"
+    },
+    "built_in": [
+      "contact.name",
+      "contact.first_name",
+      "contact.phone",
+      "contact.email",
+      "appointment.start_time"
+    ]
+  },
+  "calendar": [
+    {
+      "event": "booked",
+      "to": "assignedUser",
+      "channel": "sms",
+      "body": "Quote call booked: {{appointment.start_time}}\n{{contact.name}} {{contact.phone}}\n{{contact.service_needed}} in {{contact.suburb}} ({{contact.property_type}})\nAddress: {{contact.property_address}}\n{{contact.chat_summary}}"
+    },
+    {
+      "event": "booked",
+      "to": "assignedUser",
+      "channel": "email",
+      "subject": "Quote call booked – {{contact.name}} – {{appointment.start_time}}",
+      "body": "New quote call booked for {{appointment.start_time}}.\n\nName: {{contact.name}}\nMobile: {{contact.phone}}\nEmail: {{contact.email}}\nService: {{contact.service_needed}}\nSuburb: {{contact.suburb}}\nHome or commercial: {{contact.property_type}}\nAddress: {{contact.property_address}}\n\nSummary: {{contact.chat_summary}}"
+    },
+    {
+      "event": "booked",
+      "to": "contact",
+      "channel": "sms",
+      "body": "Hi {{contact.first_name}}, your quote call with {{custom_values.owner_first_name}} from {{custom_values.company_name}} is booked for {{appointment.start_time}}. {{custom_values.owner_first_name}} will call you on {{contact.phone}}. Need to change it? Just reply here."
+    },
+    {
+      "event": "booked",
+      "to": "contact",
+      "channel": "email",
+      "subject": "Your quote call with {{custom_values.company_name}} is booked",
+      "body": "Hi {{contact.first_name}},\n\nThanks for getting in touch. Your quote call with {{custom_values.owner_first_name}} is booked for {{appointment.start_time}}. {{custom_values.owner_first_name}} will call you on {{contact.phone}}.\n\nIf you have photos of the job, reply to this email with them attached and {{custom_values.owner_first_name}} will take a look before the call.\n\nNeed to change the time? Reply to this email or call {{custom_values.company_phone}}.\n\nThanks,\n{{custom_values.company_name}}"
+    },
+    {
+      "event": "reminder",
+      "to": "assignedUser",
+      "channel": "sms",
+      "before": [
+        15,
+        "minutes"
+      ],
+      "body": "Quote call in 15 min ({{appointment.start_time}}):\n{{contact.name}} {{contact.phone}}\n{{contact.service_needed}} in {{contact.suburb}} ({{contact.property_type}})\nAddress: {{contact.property_address}}\n{{contact.chat_summary}}"
+    },
+    {
+      "event": "reminder",
+      "to": "assignedUser",
+      "channel": "email",
+      "before": [
+        15,
+        "minutes"
+      ],
+      "subject": "Quote call in 15 min – {{contact.name}} – {{contact.phone}}",
+      "body": "Quote call at {{appointment.start_time}}. Call the customer on {{contact.phone}}.\n\nName: {{contact.name}}\nMobile: {{contact.phone}}\nEmail: {{contact.email}}\nService: {{contact.service_needed}}\nSuburb: {{contact.suburb}}\nHome or commercial: {{contact.property_type}}\nAddress: {{contact.property_address}}\n\nSummary: {{contact.chat_summary}}"
+    },
+    {
+      "event": "reminder",
+      "to": "contact",
+      "channel": "sms",
+      "before": [
+        1,
+        "hours"
+      ],
+      "body": "Hi {{contact.first_name}}, just a reminder {{custom_values.owner_first_name}} from {{custom_values.company_name}} will call you at {{appointment.start_time}} about your quote."
+    },
+    {
+      "event": "reminder",
+      "to": "contact",
+      "channel": "email",
+      "before": [
+        1,
+        "hours"
+      ],
+      "subject": "Reminder: {{custom_values.owner_first_name}} will call you soon",
+      "body": "Hi {{contact.first_name}},\n\nJust a reminder that {{custom_values.owner_first_name}} from {{custom_values.company_name}} will call you at {{appointment.start_time}} about your quote, on {{contact.phone}}.\n\nThanks,\n{{custom_values.company_name}}"
+    },
+    {
+      "event": "cancellation",
+      "to": "assignedUser",
+      "channel": "sms",
+      "body": "Quote call CANCELLED: {{appointment.start_time}} with {{contact.name}} {{contact.phone}}, {{contact.service_needed}} in {{contact.suburb}}."
+    },
+    {
+      "event": "cancellation",
+      "to": "assignedUser",
+      "channel": "email",
+      "subject": "Quote call cancelled – {{contact.name}}",
+      "body": "The quote call at {{appointment.start_time}} was cancelled.\n\nName: {{contact.name}}\nMobile: {{contact.phone}}\nEmail: {{contact.email}}\nService: {{contact.service_needed}}\nSuburb: {{contact.suburb}}\n\nYou may want to follow up."
+    },
+    {
+      "event": "cancellation",
+      "to": "contact",
+      "channel": "sms",
+      "body": "Hi {{contact.first_name}}, your quote call with {{custom_values.owner_first_name}} from {{custom_values.company_name}} on {{appointment.start_time}} has been cancelled. Reply here if you'd like a new time."
+    },
+    {
+      "event": "cancellation",
+      "to": "contact",
+      "channel": "email",
+      "subject": "Your quote call has been cancelled",
+      "body": "Hi {{contact.first_name}},\n\nYour quote call with {{custom_values.owner_first_name}} on {{appointment.start_time}} has been cancelled.\n\nIf you'd still like a quote, reply to this email or call {{custom_values.company_phone}} and we'll find a new time.\n\nThanks,\n{{custom_values.company_name}}"
+    },
+    {
+      "event": "reschedule",
+      "to": "assignedUser",
+      "channel": "sms",
+      "body": "Quote call MOVED to {{appointment.start_time}}: {{contact.name}} {{contact.phone}}, {{contact.service_needed}} in {{contact.suburb}}."
+    },
+    {
+      "event": "reschedule",
+      "to": "assignedUser",
+      "channel": "email",
+      "subject": "Quote call moved – {{contact.name}} – {{appointment.start_time}}",
+      "body": "The quote call with {{contact.name}} has moved to {{appointment.start_time}}.\n\nMobile: {{contact.phone}}\nEmail: {{contact.email}}\nService: {{contact.service_needed}}\nSuburb: {{contact.suburb}}"
+    },
+    {
+      "event": "reschedule",
+      "to": "contact",
+      "channel": "sms",
+      "body": "Hi {{contact.first_name}}, your quote call with {{custom_values.owner_first_name}} from {{custom_values.company_name}} has moved to {{appointment.start_time}}. {{custom_values.owner_first_name}} will call you on {{contact.phone}}."
+    },
+    {
+      "event": "reschedule",
+      "to": "contact",
+      "channel": "email",
+      "subject": "Your quote call has a new time",
+      "body": "Hi {{contact.first_name}},\n\nYour quote call with {{custom_values.owner_first_name}} has moved to {{appointment.start_time}}. {{custom_values.owner_first_name}} will call you on {{contact.phone}}.\n\nNeed a different time? Reply to this email or call {{custom_values.company_phone}}.\n\nThanks,\n{{custom_values.company_name}}"
+    }
+  ],
+  "workflows": [
+    {
+      "workflow": "Workflow 1: new lead",
+      "to": "owner",
+      "channel": "sms",
+      "body": "New chat lead: {{contact.name}} {{contact.phone}}\n{{contact.service_needed}} in {{contact.suburb}} ({{contact.property_type}})\n{{contact.chat_summary}}"
+    },
+    {
+      "workflow": "Workflow 1: new lead",
+      "to": "owner",
+      "channel": "email",
+      "subject": "New chat lead – {{contact.name}} – {{contact.suburb}}",
+      "body": "{{contact.name}} sent an enquiry through the chat.\n\nName: {{contact.name}}\nMobile: {{contact.phone}}\nEmail: {{contact.email}}\nService: {{contact.service_needed}}\nSuburb: {{contact.suburb}}\nHome or commercial: {{contact.property_type}}\n\nSummary:\n{{contact.chat_summary}}\n\nJob notes:\n{{contact.job_notes}}"
+    },
+    {
+      "workflow": "Workflow 2: unfinished chat",
+      "to": "owner",
+      "channel": "sms",
+      "body": "Unfinished chat: {{contact.name}} {{contact.phone}} left before giving all their details.\n{{contact.chat_summary}}"
+    },
+    {
+      "workflow": "Workflow 2: unfinished chat",
+      "to": "owner",
+      "channel": "email",
+      "subject": "Unfinished chat – {{contact.name}} – follow up",
+      "body": "{{contact.name}} started a chat but left before giving all their details.\n\nName: {{contact.name}}\nMobile: {{contact.phone}}\nEmail: {{contact.email}}\nService: {{contact.service_needed}}\nSuburb: {{contact.suburb}}\n\nChat summary:\n{{contact.chat_summary}}"
+    },
+    {
+      "workflow": "Workflow 2: already sent (optional)",
+      "to": "owner",
+      "channel": "sms",
+      "body": "More from {{contact.name}}: {{contact.property_address}}\nBest time to call: {{contact.best_time_to_call}}\nPhotos (if any) are in the chat."
+    }
+  ]
+}

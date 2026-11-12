@@ -1,0 +1,21 @@
+{
+  "success": true,
+  "data": {
+    "id": "nahmwrUTbo3e1GZ1P4e8",
+    "name": "Greater Sydney Landscapes",
+    "nameLowerCase": "greater sydney landscapes",
+    "locationId": "hxBiznDzJDX1axVNbS9J",
+    "deleted": false,
+    "createdAt": "2026-11-11T14:41:51+00:00",
+    "updatedAt": "2026-11-11T14:59:34+00:00",
+    "kbMetadata": {
+      "faqs": 0,
+      "urls": 0,
+      "richText": 0,
+      "files": 1,
+      "webSearches": 0,
+      "tables": 0
+    },
+    "description": "This document is the approved source of facts for the Greater Sydney Landscapes chat assistant.\nEverything here matches the website at www.greatersydneylandscapes.com.au. If a"
+  }
+}

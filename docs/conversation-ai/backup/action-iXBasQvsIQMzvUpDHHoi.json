@@ -1,0 +1,23 @@
+{
+  "data": {
+    "updatedAt": "2026-10-15T13:23:33.115Z",
+    "createdAt": "2026-10-15T13:23:33.115Z",
+    "name": "Update Service Needed",
+    "type": "updateContactField",
+    "snapshotOriginId": "aoBUlc3AHuMK1jbarS00",
+    "details": {
+      "contactFieldId": "yJ4xU0gUmg8Iwmpg3Bar",
+      "description": "Service need of the contact",
+      "contactUpdateExamples": [
+        "Lawn Mowing",
+        "Hedging",
+        "Fertilization & Herbicide Applications",
+        "Mulching",
+        "Softscaping"
+      ]
+    },
+    "agentId": "DWddiXECUA3yLyBpkQhM",
+    "id": "iXBasQvsIQMzvUpDHHoi"
+  },
+  "success": true
+}
