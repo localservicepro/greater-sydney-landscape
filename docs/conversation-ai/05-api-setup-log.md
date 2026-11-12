@@ -96,3 +96,7 @@ Testing showed leads dropping off at the length of the old flow (8 form question
 ## Lead-first question order
 
 Kiley now asks, in order: suburb, home or commercial (saved to Property Type), the work (Service Needed, Job Notes), mobile, first name. She then saves Chat Lead Status and Chat Summary and triggers the alert straight away, with no confirmation step. After that she asks for the address and "anything else that would help us quote", such as a photo (paperclip) or the best time to call (new field **Best Time to Call**, `contact.best_time_to_call`, id `wwfdWUcm20cprS5T37SA`), and can book a quote call if they want a set time. The Trigger a Workflow action is now named "Lead captured – notify Daniel" and fires at that point. Not a Fit leads are not sent.
+
+## Quote call booking notifications
+
+On the "2 Minute Quote Calls" calendar, two notifications to the assigned user (Daniel) were added for new bookings: an email (`6af535b49690971a39a225eb`) and an SMS (`6af535b496909727d0a225ec`), both showing the call time, the customer's name, mobile, service and suburb; the email also shows home or commercial, address and the Chat Summary. The existing in-app notifications were kept. Backup of the notifications before the change: `backup/calendar-quote-calls-notifications.json`.
