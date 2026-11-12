@@ -92,3 +92,7 @@ Testing showed leads dropping off at the length of the old flow (8 form question
 - The Trigger a Workflow action still uses "GSL - AI Confirmed Enquiry - Daniel Alerts"; its condition now requires the Chat Summary to be saved first.
 - GHL's built-in conversation summary (`contact.conversation_ai_summary`) is written only after 15 minutes of inactivity, so it can't be used in an alert sent at confirmation. Its settings can't be changed through the API.
 - Contact Info only fills empty fields, so a returning contact's Chat Summary keeps the first enquiry's text. Clear it in the workflow after the alert if repeat enquiries matter.
+
+## Lead-first question order
+
+Kiley now asks, in order: suburb, home or commercial (saved to Property Type), the work (Service Needed, Job Notes), mobile, first name. She then saves Chat Lead Status and Chat Summary and triggers the alert straight away, with no confirmation step. After that she asks for the address and "anything else that would help us quote", such as a photo (paperclip) or the best time to call (new field **Best Time to Call**, `contact.best_time_to_call`, id `wwfdWUcm20cprS5T37SA`), and can book a quote call if they want a set time. The Trigger a Workflow action is now named "Lead captured – notify Daniel" and fires at that point. Not a Fit leads are not sent.

@@ -5,7 +5,7 @@ Daniel gets a text and an email for every website chat lead: straight away when 
 | | Workflow 1: Confirmed lead | Workflow 2: Unfinished chat |
 |---|---|---|
 | Name | Kiley \| Confirmed lead → Daniel (the existing workflow `42be1832…`, renamed) | Kiley \| Unfinished chat → Daniel (new) |
-| Started by | Kiley's "Confirmed quote enquiry – notify Daniel" action | Kiley's Summary Settings, 15 min after a chat goes quiet |
+| Started by | Kiley's "Lead captured – notify Daniel" action, as soon as she has the name and number | Kiley's Summary Settings, 15 min after a chat goes quiet |
 | Summary used | `{{contact.chat_summary}}`, written by Kiley at confirmation | `{{contact.chat_summary}}`, written by GHL's summary when Kiley didn't |
 
 A confirmed chat also produces a summary later. Workflow 1 adds the tag `kiley-confirmed`; Workflow 2 sees it, sends nothing, and removes the tag so the next enquiry from that person works normally.
@@ -22,7 +22,7 @@ Open the existing workflow, rename it **Kiley | Confirmed lead → Daniel**, rem
 6. **Internal Notification, SMS** to Daniel Longo:
    ```
    New chat lead: {{contact.name}} {{contact.phone}}
-   {{contact.service_needed}} in {{contact.suburb}}
+   {{contact.service_needed}} in {{contact.suburb}} ({{contact.property_type}})
    {{contact.chat_summary}}
    ```
 7. **Internal Notification, Email** to Daniel Longo. Subject `New chat lead – {{contact.name}} – {{contact.suburb}}`:
@@ -34,6 +34,7 @@ Open the existing workflow, rename it **Kiley | Confirmed lead → Daniel**, rem
    Email: {{contact.email}}
    Service: {{contact.service_needed}}
    Suburb: {{contact.suburb}}
+   Home or commercial: {{contact.property_type}}
 
    Summary:
    {{contact.chat_summary}}
@@ -92,3 +93,5 @@ Create from scratch, name **Kiley | Unfinished chat → Daniel**:
   3. Delete the test contacts.
 
 **Known limit:** Kiley's Contact Info actions only fill empty fields, so a returning customer's Chat Summary keeps their first enquiry's text. If that becomes a problem, add an Update Contact Field step at the end of Workflow 1 that clears Chat Summary, and check it actually clears.
+
+**Address and best time to call** are collected after the alert is sent, so they are not in it. Daniel sees them on the contact (Property Address, Best Time to Call), along with any photos in the conversation.
