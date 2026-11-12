@@ -71,7 +71,8 @@ Create from scratch, name **Kiley | Unfinished chat → Daniel**:
    Chat summary:
    {{contact.chat_summary}}
    ```
-6. Settings: Allow re-entry **On**, Stop on response **Off**. Publish.
+6. **Both paths, last step: Update Contact Field.** Clear Service Needed, Additional Services, Job Notes, Chat Summary, Chat Lead Status and Best Time to Call. On the left path it goes after Remove Contact Tag; on the right, after the email. Keep name, phone, email, Suburb, Property Address and Property Type, which Kiley uses to welcome returning customers and confirm their details. Kiley can only fill empty fields, so without this a repeat enquiry would keep the first job's details and Daniel's alert would show the old summary. Check a test contact to confirm the fields really clear.
+7. Settings: Allow re-entry **On**, Stop on response **Off**. Publish.
 
 ## Kiley → Summary Settings
 
@@ -92,6 +93,5 @@ Create from scratch, name **Kiley | Unfinished chat → Daniel**:
   2. A chat abandoned after giving a name and mobile produces "Unfinished website chat" about 15 minutes later.
   3. Delete the test contacts.
 
-**Known limit:** Kiley's Contact Info actions only fill empty fields, so a returning customer's Chat Summary keeps their first enquiry's text. If that becomes a problem, add an Update Contact Field step at the end of Workflow 1 that clears Chat Summary, and check it actually clears.
 
 **Address and best time to call** are collected after the alert is sent, so they are not in it. Daniel sees them on the contact (Property Address, Best Time to Call), along with any photos in the conversation.
