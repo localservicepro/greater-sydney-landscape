@@ -106,3 +106,5 @@ Expanded on request: Daniel's booking SMS now includes home or commercial, addre
 ## Returning customers
 
 The prompt now shows Kiley the contact's first name, phone, email, suburb, address, property type and last service. When a first name is on file she welcomes them back by name once, always asks what they need this time, and confirms details on file instead of asking ("Same place in Toongabbie?", "Still the number ending 788?"; never the full number or email address). Changed details go at the start of the Chat Summary in capitals, because Contact Info cannot overwrite a field. Workflow 2 now ends by clearing the per-job fields so a repeat enquiry starts fresh (see 06-notification-workflow.md).
+
+Added cancellation and reschedule notifications by SMS and email, to both Daniel and the customer. The calendar now has email and SMS for booked, reminder, cancellation and reschedule, for both, plus Daniel's in-app alerts.
