@@ -1,0 +1,35 @@
+{
+  "success": true,
+  "data": {
+    "knowledgeBases": [
+      {
+        "id": "nahmwrUTbo3e1GZ1P4e8",
+        "name": "Greater Sydney Landscapes",
+        "createdAt": "2026-11-11T14:41:51.823Z",
+        "updatedAt": "2026-11-11T14:59:34.960Z"
+      },
+      {
+        "id": "KVL7LNbOI7xLy6UbaSFZ",
+        "name": "Existing knowledge base 1792070610387",
+        "createdAt": "2026-10-15T13:23:30.387Z",
+        "updatedAt": "2026-10-15T13:23:30.387Z"
+      },
+      {
+        "id": "KZFSZdbY42GjoZ5FZjc7",
+        "name": "Existing knowledge base 1779167722813",
+        "createdAt": "2026-10-15T13:23:30.277Z",
+        "updatedAt": "2026-10-15T13:23:30.277Z"
+      },
+      {
+        "id": "0g6uvgDffHNgLSDIFKAC",
+        "name": "Existing knowledge base",
+        "createdAt": "2026-10-15T13:23:30.009Z",
+        "updatedAt": "2026-10-15T13:23:30.009Z",
+        "isDefault": true
+      }
+    ],
+    "activeCount": 4,
+    "hasMore": false,
+    "lastKnowledgeBaseId": "0g6uvgDffHNgLSDIFKAC"
+  }
+}

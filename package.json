@@ -1,0 +1,13 @@
+{
+  "name": "greater-sydney-landscapes-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static website for Greater Sydney Landscapes — lawn mowing, garden maintenance and landscaping across Western Sydney.",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "images": "python3 scripts/images.py",
+    "serve": "npx --yes serve dist -l 4173"
+  },
+  "engines": { "node": ">=18" }
+}

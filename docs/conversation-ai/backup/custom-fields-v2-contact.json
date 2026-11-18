@@ -1,0 +1,5 @@
+{
+  "message": "Api does not support objectKey of type contact or opportunity",
+  "error": "Bad Request",
+  "statusCode": 400
+}

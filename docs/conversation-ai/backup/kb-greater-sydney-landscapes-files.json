@@ -1,0 +1,24 @@
+{
+  "success": true,
+  "data": {
+    "files": [
+      {
+        "createdAt": "2026-11-11T14:58:24.191Z",
+        "deleted": false,
+        "name": "03-knowledge-base.pdf",
+        "locationId": "hxBiznDzJDX1axVNbS9J",
+        "knowledgeBaseId": "nahmwrUTbo3e1GZ1P4e8",
+        "size": 133919,
+        "mimeType": "application/pdf",
+        "encoding": "7bit",
+        "status": "PROCESSED",
+        "updatedAt": "2026-11-11T14:59:34.864Z",
+        "id": "GGEQeRwEsXepxkCeAjNS",
+        "importedFrom": "LOCAL",
+        "totalChunks": 12,
+        "embeddedChunks": 12
+      }
+    ],
+    "count": 1
+  }
+}

@@ -1,0 +1,34 @@
+# Redirect map for the rebuild of greatersydneylandscapes.com.au
+# The previous GoDaddy site was a single page at "/", so the homepage URL is preserved as-is.
+# These rules catch builder-style and legacy variants so nothing 404s after cut-over.
+
+# Canonical host (apex -> www)
+https://greatersydneylandscapes.com.au/*  https://www.greatersydneylandscapes.com.au/:splat  301!
+
+# Legacy / builder URL variants -> new clean URLs
+/index.html            /                       301
+/home                  /                       301
+/home/                 /                       301
+/about-us              /about/                 301
+/about-us/             /about/                 301
+/contact-us            /contact/               301
+/contact-us/           /contact/               301
+/services.html         /services/              301
+/service-areas         /areas/                 301
+/service-areas/        /areas/                 301
+/lawn-mowing           /services/lawn-mowing/  301
+/garden-maintenance    /services/garden-maintenance/ 301
+/hedge-trimming        /services/hedge-trimming/     301
+/lawn-care             /services/lawn-care/          301
+/pressure-washing      /services/pressure-washing/   301
+/landscaping           /services/landscaping/        301
+/weed-spraying         /services/lawn-care/          301
+/fertilising           /services/lawn-care/          301
+/ride-on-mowing        /services/lawn-mowing/        301
+
+# Trailing-slash normalisation for the main sections
+/services              /services/              301
+/about                 /about/                 301
+/areas                 /areas/                 301
+/contact               /contact/               301
+/thank-you             /thank-you/             301

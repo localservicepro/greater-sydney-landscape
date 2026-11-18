@@ -1,0 +1,118 @@
+{
+  "pipelines": [
+    {
+      "id": "OJkTMVVBhGKyEJXV4her",
+      "name": "Operations Pipeline",
+      "showInFunnel": true,
+      "showInPieChart": true,
+      "useOpportunityProbability": false,
+      "dateAdded": "2026-10-15T13:23:19.834Z",
+      "dateUpdated": "2026-10-15T13:23:19.834Z",
+      "stages": [
+        {
+          "id": "3bb7686f-afb3-4c35-a723-926cd1a8d40f",
+          "name": "New Enquiry",
+          "showInFunnel": true,
+          "showInPieChart": true,
+          "position": 0,
+          "stageWinProbability": 9.09,
+          "originId": "Zjc3YWU1NTMtM2YzYS00ZmIyLTg0YTUtMjZlODgyMzZjYzQy",
+          "color": "#64748B"
+        },
+        {
+          "id": "4713014b-df78-4d61-bc4a-ddf5c4727083",
+          "name": "Request Quote",
+          "showInFunnel": true,
+          "showInPieChart": true,
+          "position": 1,
+          "stageWinProbability": 18.18,
+          "originId": "ZGI3YjY5MWMtZDQxZC00ZWFkLWI3NjctZGE3ODA3NjI2MDEw",
+          "color": "#64748B"
+        },
+        {
+          "id": "52062704-7d18-4565-b683-cd9aedf68fe9",
+          "name": "Quote Sent",
+          "showInFunnel": true,
+          "showInPieChart": true,
+          "position": 2,
+          "stageWinProbability": 27.27,
+          "originId": "YWJiNTU2NjAtMmIxNC00ZGU3LTgwNDAtMzBiMzc4MGEwNjFl",
+          "color": "#64748B"
+        },
+        {
+          "id": "5443e9a8-75fd-46d1-ad98-f06aeac11a29",
+          "name": "Accepted",
+          "showInFunnel": true,
+          "showInPieChart": true,
+          "position": 3,
+          "stageWinProbability": 36.36,
+          "originId": "NWQ1NTNkNWQtNWI1NC00OGEzLTkyYzAtYWQwNmY4NGM0MTRl",
+          "color": "#64748B"
+        },
+        {
+          "id": "16f5072f-159b-448d-9886-2221195653a7",
+          "name": "Booked",
+          "showInFunnel": true,
+          "showInPieChart": true,
+          "position": 4,
+          "stageWinProbability": 45.45,
+          "originId": "MDg1MDk4YjQtZDVjYi00OGZhLWExYzEtNjQwZGZlZGY0OWRj",
+          "color": "#64748B"
+        },
+        {
+          "id": "ba85ce54-05fa-47e3-b629-f7fc477c3619",
+          "name": "Job Completed",
+          "showInFunnel": true,
+          "showInPieChart": true,
+          "position": 5,
+          "stageWinProbability": 54.55,
+          "originId": "NmE3NGNjMGItOWE5ZS00YTdhLWJmYmMtMmIxZTFhODA4N2Nm",
+          "color": "#64748B"
+        },
+        {
+          "id": "91d67c23-7d3b-44a3-ac3e-5a0e1ef4c8d0",
+          "name": "Invoice paid",
+          "showInFunnel": true,
+          "showInPieChart": true,
+          "position": 6,
+          "stageWinProbability": 63.64,
+          "originId": "Yjk4MmZiNDYtN2FlYS00MzFhLThmODQtMjY3MDU5NzU5OGQ0",
+          "color": "#64748B"
+        },
+        {
+          "id": "76919c78-ead0-4f93-9331-7edfb17aa301",
+          "name": "Review Received",
+          "showInFunnel": true,
+          "showInPieChart": true,
+          "position": 7,
+          "stageWinProbability": 72.73,
+          "originId": "NmNlOWJjYTAtYzkwMi00YzIyLWJjZDktYjY2NDlhYjZhMWUx",
+          "color": "#64748B"
+        },
+        {
+          "id": "efd77dc5-be6b-4946-b59a-c1f3af244f7f",
+          "name": "Declined",
+          "showInFunnel": true,
+          "showInPieChart": true,
+          "position": 8,
+          "stageWinProbability": 81.82,
+          "originId": "OThlYmYxYTItOTAzNy00YzQwLWJhMjgtOGJkMGUxYmVkOTRk",
+          "color": "#64748B"
+        },
+        {
+          "id": "1019c1de-11c6-43ce-8370-69d373929162",
+          "name": "Retarget Leads",
+          "showInFunnel": true,
+          "showInPieChart": true,
+          "position": 9,
+          "stageWinProbability": 90.91,
+          "originId": "YTVlMDg0OTYtZWI4Yi00NDA2LTkxNGQtN2FlY2QxMjFlY2M1",
+          "color": "#64748B"
+        }
+      ],
+      "locationId": "hxBiznDzJDX1axVNbS9J",
+      "originId": "SeeWBY0tmBS867Vd2grF",
+      "position": "ZwU144t"
+    }
+  ]
+}

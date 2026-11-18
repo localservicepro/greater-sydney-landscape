@@ -1,0 +1,17 @@
+{
+  "data": {
+    "updatedAt": "2026-11-02T04:07:59.594Z",
+    "createdAt": "2026-11-02T04:07:59.594Z",
+    "name": "Confirmed quote enquiry - notify Daniel",
+    "type": "triggerWorkflow",
+    "details": {
+      "workflowIds": [
+        "42be1832-4480-4f24-af9e-4cf83b32a9fe"
+      ],
+      "triggerCondition": "Trigger only after a customer requests a new quote, provides service, suburb, job details, name and a usable preferred phone or email, and explicitly confirms the enquiry recap. Trigger once for that enquiry, never on general questions, corrections before confirmation, repeat acknowledgements, human requests or opt-outs. Do not trigger again unless the customer clearly starts a separate new enquiry."
+    },
+    "agentId": "DWddiXECUA3yLyBpkQhM",
+    "id": "L3ZpN2JMecwlID0ag33q"
+  },
+  "success": true
+}

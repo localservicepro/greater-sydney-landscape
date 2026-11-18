@@ -1,0 +1,220 @@
+{
+  "workflows": [
+    {
+      "id": "1493c6f4-66b4-4558-b1ca-ad252c9c99ce",
+      "name": "0- Past Customers - Ask For Review",
+      "status": "published",
+      "version": 3,
+      "createdAt": "2026-10-15T13:23:34.526Z",
+      "updatedAt": "2026-11-03T23:33:55.099Z",
+      "locationId": "hxBiznDzJDX1axVNbS9J"
+    },
+    {
+      "id": "3011ee81-adb2-4cd0-aae7-f0eee00d7340",
+      "name": "00 1 - Website Free Quote Submitted",
+      "status": "published",
+      "version": 5,
+      "createdAt": "2026-10-15T13:23:34.765Z",
+      "updatedAt": "2026-11-03T03:50:48.930Z",
+      "locationId": "hxBiznDzJDX1axVNbS9J"
+    },
+    {
+      "id": "d7a3a101-5576-4216-b74c-ec70a3e74222",
+      "name": "000 - New Website Launch Announcement",
+      "status": "draft",
+      "version": 2,
+      "createdAt": "2026-10-15T13:23:34.995Z",
+      "updatedAt": "2026-10-15T13:23:44.735Z",
+      "locationId": "hxBiznDzJDX1axVNbS9J"
+    },
+    {
+      "id": "b9116783-8085-4432-9365-a58ccd26dd8d",
+      "name": "001 - List Reactivation",
+      "status": "published",
+      "version": 2,
+      "createdAt": "2026-10-15T13:23:35.219Z",
+      "updatedAt": "2026-10-15T13:23:45.025Z",
+      "locationId": "hxBiznDzJDX1axVNbS9J"
+    },
+    {
+      "id": "efefe7f1-d2fb-46d0-a3a9-ffd41b2a2686",
+      "name": "001 - Review Received - Ask For Referral",
+      "status": "draft",
+      "version": 4,
+      "createdAt": "2026-10-15T13:23:35.424Z",
+      "updatedAt": "2026-11-04T05:39:50.196Z",
+      "locationId": "hxBiznDzJDX1axVNbS9J"
+    },
+    {
+      "id": "76569d79-cc57-4b5d-b211-b3d3fad273cc",
+      "name": "001 Giveaway Entrant",
+      "status": "published",
+      "version": 2,
+      "createdAt": "2026-10-15T13:23:35.630Z",
+      "updatedAt": "2026-10-15T13:23:45.726Z",
+      "locationId": "hxBiznDzJDX1axVNbS9J"
+    },
+    {
+      "id": "1d1ba038-9b4b-4f05-91b5-4ff7d22a09ca",
+      "name": "002 - Long Term Nurture/Reactivation Email Sequence",
+      "status": "published",
+      "version": 2,
+      "createdAt": "2026-10-15T13:23:35.881Z",
+      "updatedAt": "2026-10-15T13:23:45.061Z",
+      "locationId": "hxBiznDzJDX1axVNbS9J"
+    },
+    {
+      "id": "77e86edb-5558-4ff6-9513-0884be06f97b",
+      "name": "002 - Referral Quote Form Submitted",
+      "status": "draft",
+      "version": 3,
+      "createdAt": "2026-10-15T13:23:36.097Z",
+      "updatedAt": "2026-11-04T05:41:28.902Z",
+      "locationId": "hxBiznDzJDX1axVNbS9J"
+    },
+    {
+      "id": "464b7172-e042-446d-a4c0-75bcd27aa9a3",
+      "name": "002 - Voucher Claimed Offer",
+      "status": "published",
+      "version": 2,
+      "createdAt": "2026-10-15T13:23:36.312Z",
+      "updatedAt": "2026-10-15T13:23:45.213Z",
+      "locationId": "hxBiznDzJDX1axVNbS9J"
+    },
+    {
+      "id": "f6472606-6473-436a-95df-a15c62b004fd",
+      "name": "002 - Web Chat - Quote Call Booked",
+      "status": "published",
+      "version": 2,
+      "createdAt": "2026-10-15T13:23:36.514Z",
+      "updatedAt": "2026-10-15T13:23:45.158Z",
+      "locationId": "hxBiznDzJDX1axVNbS9J"
+    },
+    {
+      "id": "489c8437-802d-4279-9dd0-752ae68be194",
+      "name": "003 - Post-Quote Follow-up",
+      "status": "published",
+      "version": 3,
+      "createdAt": "2026-10-15T13:23:36.745Z",
+      "updatedAt": "2026-11-03T02:49:32.887Z",
+      "locationId": "hxBiznDzJDX1axVNbS9J"
+    },
+    {
+      "id": "fd2188cb-cb3a-4213-800b-3035b18bc7bb",
+      "name": "003 - Quote Sent",
+      "status": "published",
+      "version": 2,
+      "createdAt": "2026-10-15T13:23:36.974Z",
+      "updatedAt": "2026-10-15T13:23:44.848Z",
+      "locationId": "hxBiznDzJDX1axVNbS9J"
+    },
+    {
+      "id": "dc4100b7-6b46-44d4-8248-9d9a1ee22981",
+      "name": "003b - Post-Quote Reply Notification",
+      "status": "published",
+      "version": 12,
+      "createdAt": "2026-10-15T13:23:37.216Z",
+      "updatedAt": "2026-11-03T03:49:05.364Z",
+      "locationId": "hxBiznDzJDX1axVNbS9J"
+    },
+    {
+      "id": "97181d72-d0a0-4961-add8-6215ed03d07d",
+      "name": "004 - Estimate Status",
+      "status": "published",
+      "version": 2,
+      "createdAt": "2026-10-15T13:23:37.559Z",
+      "updatedAt": "2026-10-15T13:23:45.206Z",
+      "locationId": "hxBiznDzJDX1axVNbS9J"
+    },
+    {
+      "id": "e93a041d-e91e-4e67-8538-609421c68d39",
+      "name": "004 - Nurture",
+      "status": "published",
+      "version": 2,
+      "createdAt": "2026-10-15T13:23:37.801Z",
+      "updatedAt": "2026-10-15T13:23:45.164Z",
+      "locationId": "hxBiznDzJDX1axVNbS9J"
+    },
+    {
+      "id": "8336dd71-0ec1-4683-8b84-fa1e41a6bcc7",
+      "name": "005 - Invoice Paid",
+      "status": "published",
+      "version": 2,
+      "createdAt": "2026-10-15T13:23:38.023Z",
+      "updatedAt": "2026-10-15T13:23:44.997Z",
+      "locationId": "hxBiznDzJDX1axVNbS9J"
+    },
+    {
+      "id": "f9faf632-a4e5-400c-8422-b06d9a76346a",
+      "name": "1 - Review Link Clicked",
+      "status": "published",
+      "version": 2,
+      "createdAt": "2026-10-15T13:23:38.234Z",
+      "updatedAt": "2026-10-15T13:23:45.122Z",
+      "locationId": "hxBiznDzJDX1axVNbS9J"
+    },
+    {
+      "id": "fb460e68-c730-4dca-9e27-3acef124e8ca",
+      "name": "2 - Negative Feedback Received",
+      "status": "published",
+      "version": 3,
+      "createdAt": "2026-10-15T13:23:38.461Z",
+      "updatedAt": "2026-11-03T23:45:55.934Z",
+      "locationId": "hxBiznDzJDX1axVNbS9J"
+    },
+    {
+      "id": "f778c3da-61cb-474a-862f-f38d65efc806",
+      "name": "Exit Post-Quote Follow-up (Quote Accepted)",
+      "status": "published",
+      "version": 3,
+      "createdAt": "2026-10-15T13:23:39.188Z",
+      "updatedAt": "2026-11-03T02:53:03.088Z",
+      "locationId": "hxBiznDzJDX1axVNbS9J"
+    },
+    {
+      "id": "a2e39097-e4ce-4fe2-b90a-6b5850f6e187",
+      "name": "Facebook Message",
+      "status": "published",
+      "version": 2,
+      "createdAt": "2026-10-15T13:23:38.702Z",
+      "updatedAt": "2026-10-15T13:23:44.975Z",
+      "locationId": "hxBiznDzJDX1axVNbS9J"
+    },
+    {
+      "id": "c2b96090-8427-4c8f-96ab-dfdb85fd8462",
+      "name": "Facebook comment automation",
+      "status": "published",
+      "version": 2,
+      "createdAt": "2026-10-15T13:23:38.938Z",
+      "updatedAt": "2026-10-15T13:23:44.942Z",
+      "locationId": "hxBiznDzJDX1axVNbS9J"
+    },
+    {
+      "id": "42be1832-4480-4f24-af9e-4cf83b32a9fe",
+      "name": "GSL - AI Confirmed Enquiry - Daniel Alerts",
+      "status": "published",
+      "version": 3,
+      "createdAt": "2026-11-02T01:23:29.866Z",
+      "updatedAt": "2026-11-02T04:06:51.210Z",
+      "locationId": "hxBiznDzJDX1axVNbS9J"
+    },
+    {
+      "id": "720296cd-a085-469e-987d-005aaf0796a5",
+      "name": "GSL — Google Review Alert — 1–3 Stars",
+      "status": "published",
+      "version": 3,
+      "createdAt": "2026-11-04T00:58:27.824Z",
+      "updatedAt": "2026-11-04T02:20:16.848Z",
+      "locationId": "hxBiznDzJDX1axVNbS9J"
+    },
+    {
+      "id": "c821f5e4-4320-4c2f-901a-c982c485ed6c",
+      "name": "System: 24hr Stale Lead Alert Workflow",
+      "status": "published",
+      "version": 2,
+      "createdAt": "2026-10-15T13:23:39.481Z",
+      "updatedAt": "2026-10-15T13:23:45.170Z",
+      "locationId": "hxBiznDzJDX1axVNbS9J"
+    }
+  ]
+}
